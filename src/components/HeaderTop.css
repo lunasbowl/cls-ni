@@ -1,0 +1,20 @@
+.header-top {
+    background-color: #63972f;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+
+.social-links img {
+    width: 30px; 
+    height: 30px;
+}

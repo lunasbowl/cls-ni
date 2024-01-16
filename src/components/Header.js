@@ -8,8 +8,10 @@ function Header () {
     return (
         <header>
             <HeaderTop />
-            <img className="clsni-logo" src={Logo} alt="CLSNI Logo" />
-            <Nav />
+            <div className="header-content">
+                <img className="clsni-logo" src={Logo} alt="CLSNI Logo" />
+                <Nav />
+            </div>
         </header>
     );
 };

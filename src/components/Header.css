@@ -11,8 +11,9 @@ header {
 }
 
 .clsni-logo {
-    width: 30%;
-    max-width: 200px;
+    margin-left: 100px;
+    width: 50%;
+    max-width: 300px;
     height: auto;
 }
 
@@ -29,4 +30,5 @@ header {
 
 .nav-item:hover {
     background-color: #85bc4d;
+    transition: background-color 0.3s, color 0.3s;
 }

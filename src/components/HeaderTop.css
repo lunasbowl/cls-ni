@@ -1,13 +1,33 @@
 .header-top {
-    background-color: #63972f;
-    padding: 10px;
+    position: relative;
+}
+
+.LanguageSwitcher {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+}
+
+.LanguageSwitcher button {
+    padding: 8.5px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #63972f;
+    background-color: #63972f;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.LanguageSwitcher button:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 .social-links {
     display: flex;
+    align-items: center;
+    background-color: #63972f;
 }
 
 .social-links a {
@@ -15,6 +35,7 @@
 }
 
 .social-links img {
-    width: 30px; 
+    margin-top: 3px;
+    width: 30px;
     height: 30px;
 }

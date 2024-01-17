@@ -1,0 +1,23 @@
+.about-constitution {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    line-height: 1.5;
+}
+
+li, p {
+    line-height: 1.5;
+}
+
+ol {
+    list-style-type: lower-alpha;
+    list-style-position: outside;
+}

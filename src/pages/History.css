@@ -1,0 +1,17 @@
+.about-history {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.history-title {
+    text-align: center;
+}
+
+.history-title h1 {
+    font-size: 2rem;
+}
+
+.history-main p {
+    text-indent: 30px;
+}

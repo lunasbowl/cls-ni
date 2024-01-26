@@ -11,24 +11,21 @@ header {
 }
 
 .clsni-logo {
-    margin-left: 100px;
-    width: 50%;
-    max-width: 300px;
-    height: auto;
+        margin-left: 100px;
+        width: 50%;
+        max-width: 400px;
+        height: auto;
 }
 
-.nav {
-    display: flex;
-}
+@media only screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.nav-item {
-    text-decoration: none;
-    color: black;
-    padding: 8px 16px;
+    .clsni-logo {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
 
-}
-
-.nav-item:hover {
-    background-color: #85bc4d;
-    transition: background-color 0.3s, color 0.3s;
 }

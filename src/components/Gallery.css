@@ -1,0 +1,12 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+a.button {
+    text-decoration: none;
+    background-color: none;
+    color: white;
+    font-size: 2rem;
+}
+
+a.button :hover {
+    color: hotpink;
+}

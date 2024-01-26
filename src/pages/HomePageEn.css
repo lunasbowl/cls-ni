@@ -1,0 +1,35 @@
+.heading-h1 h1, .heading-h1 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    font-weight: 1000;
+    color: #996734;
+}
+
+.welcome {
+    font-size: 4rem;
+}
+
+.welcome-school {
+    display: flex;
+    font-size: 3vw;
+    color: #63972f;
+    white-space: nowrap;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .welcome {
+        font-size: 150%;
+    }
+
+    .welcome-school {
+        display: flex;
+        text-align: center;
+        font-size: 100%;
+    }
+}

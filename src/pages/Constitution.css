@@ -1,20 +1,24 @@
 .about-constitution {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 50px;
 }
 
-h1 {
+.constitution-title h1 {
     font-size: 2rem;
     text-align: center;
 }
 
-h2 {
+.about-constitution h2 {
     line-height: 1.5;
 }
 
 li, p {
     line-height: 1.5;
+}
+
+.about-constitution p {
+    text-align: left;
 }
 
 ol {

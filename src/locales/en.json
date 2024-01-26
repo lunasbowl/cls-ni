@@ -1,11 +1,36 @@
 {
+    "school": "Chinese Language School Northern Ireland(CLSNI)",
+    "welcome": "Welcome To",
+
+    "home": "Home",
     "about": "About",
     "events": "Events",
     "resources": "Resources",
+    "contacts": "Contacts",
 
     "constitution": "Constitution",
-    "history": "History",
+    "history": "About CLSNI",
+    "management-committee": "Management Committee",
+    "teachers": "Faculty and Staff",
+    "parent-committee": "Parent Committee",
 
-    "slogan": "Promoting Chinese Language and Culture"
+    "slogan": "Promoting Chinese Language and Culture",
+    "see-events": "See recent news and events",
+    "staff": "Our faculty and staff",
+
+    "read-more": "Read More",
+
+    "history-page-title": "Chinese Language School NI",
+    "history-page-author": "- Mrs Yuan McCoo Zhang, Vice Principal",
+    "history-page-para1": "In 1983, Chinese Chamber of Commerce founded the Chinese Language School NI (CLS).  The objective was to provide local children with the opportunity to learn, inherit, and promote Chinese culture. At the time, only Cantonese was taught with just over 40 students. In 2001, the Mandarin school Belfast was officially merged into CLS, and from then on, CLS has been able to offer both Mandarin and Cantonese.",
+    "history-page-para2": "In the past 20 years, as more and more Chinese people came to live in Northern Ireland, also because learning Chinese has become a global trend, CLS has made great efforts to provide a conducive environment for learning the Chinese Language and culture, as well as cultivating the interests in learning Chinese. ",
+    "history-page-para3": "As of this academic year, we have enrolled over 350 students ranging from five-year-old children to eighteen-year-old young adults. We offer classes from basic conversational level to A-Level classes, covering Mandarin and Cantonese, with a total of 26 classes. Our head teachers prepare each year’s teaching and examination plans based on the syllabus and previous years’ experience. All these efforts are aiming at achieving excellency in Chinese Language and Chinese culture Studies.",
+    "history-page-para4": "However, learning Chinese is not just about passing exams but also about inheriting Chinese culture. Besides teaching the language, we involve our students in various cultural activities to create better opportunities and environments for them to learn Chinese, allowing them to appreciate Chinese culture and customs, expanding their knowledge and broadening their horizons.",
+    "history-page-para5": "During the COVID-19 pandemic, CLS timely adopted various online platforms and educational technologies to initiate online learning mode. After the restrictions were lifted, CLS took a series of safety and preventive measures to prepare for the resumption of in-person classes. These measures had successfully ensured health and safely for everyone within the school environment. ",
+    "history-page-para6": "Following the pandemic, there was a noticeable increase in the number of students joining CLS. Due to the limited space, we had to split classes between two different locations. In September this year, we reached an agreement with Ulster University to move CLS to their new building in Belfast. This move has allowed our Chinese school to come together like a big family once again. The new campus provides teachers with the latest teaching equipment, students with a comfortable learning environment, and parents with convenience.",
+    "history-page-para7": "The success of the Chinese School today would not have been possible without the support from Chinese Chamber of Commerce, as well as the dedication of our hardworking teachers and volunteer parents. We also like to show our gratitude to our former and current principals, who have worked for decades to ensure our students have the opportunity to truly learn and understand the Chinese Language and culture. They have selflessly devoted themselves to the Chinese school, serving diligently year after year. ",
+    "history-page-para8": "It’s still a long way to go for Chinese Language Education. Let us continue to strive and create a sense of belonging for the local community and Chinese families at our Chinese School. Let us make the children enjoy coming to the Chinese School; and let them feel proud of their Chinese heritage and proud to be able to master the Chinese language. ",
+
+    "recent-events": "Recent Events"
 }
 

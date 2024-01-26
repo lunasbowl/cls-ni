@@ -7,6 +7,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePageEn from './pages/HomePageEn';
 import Constitution from './pages/Constitution';
+import History from './pages/History';
+import Events from './pages/Events';
+import ManagementCommittee from './pages/ManagementCommittee';
+import ParentCommittee from './pages/ParentCommittee';
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePageEn />}></Route>
         <Route path="/about-constitution" element={<Constitution />}></Route>
+        <Route path="/about-history" element={<History />}></Route>
+        <Route path="/events" element={<Events />}></Route>
+        <Route path="/about-management-committee" element={<ManagementCommittee />}></Route>
+        <Route path="/about-parent-committee" element={<ParentCommittee />}></Route>
       </Routes>
       <Footer />
     </I18nextProvider>

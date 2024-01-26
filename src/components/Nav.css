@@ -1,6 +1,5 @@
 .nav {
     display: flex;
-
 }
 
 .nav-item {
@@ -15,6 +14,15 @@
     color: white;
 }
 
+.nav-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item a:hover {
+    color: white;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -25,14 +33,14 @@
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 100%;
-  right: 0;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    font-size: 1rem;
 }
 
 .dropdown-item {
@@ -49,4 +57,38 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-items {
+        display: none;
+    }
+
+    .nav.active .nav-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-toggle {
+        display: block;
+        background-color: #85bc4d;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .navbar-toggle:hover {
+        background-color: #333;
+        color: white;
+        transition: background-color 0.3s, color 0.3s
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .navbar-toggle {
+        display: none;
+    }
 }

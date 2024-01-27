@@ -1,7 +1,12 @@
+.hp-gallery {
+    margin-top: 15rem;
+}
+
 .heading-h1 h1, .heading-h1 p {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .line {
@@ -21,15 +26,40 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+.event-cards {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf9f6;
+}
+
+.col {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 980px) {
 
     .welcome {
-        font-size: 150%;
+        font-size: 2rem;
     }
 
     .welcome-school {
-        display: flex;
         text-align: center;
-        font-size: 100%;
+        font-size: 4vw;
     }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-cards {
+        height: auto;
+    }
+
 }

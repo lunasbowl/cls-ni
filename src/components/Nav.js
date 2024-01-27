@@ -9,7 +9,6 @@ function Nav () {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     const toggleNav = () => {
-        console.log('Toggle clicked');
         setIsNavOpen(!isNavOpen);
     };
 

@@ -20,10 +20,10 @@ function Nav () {
             </button>
             <div className="nav-items">
                 <div className="nav-item dropdown">
-                    <Link to="/" >≡ {t('home')}</Link>
+                    <Link to="/" >{t('home')}</Link>
                 </div>
                 <div className="nav-item dropdown">
-                    <span className="nav-link">≡ {t('about')}</span>
+                    <span className="nav-link">{t('about')}</span>
                     <div className="dropdown-content">
                         <Link to="/about-constitution" className="dropdown-item">
                             {t('constitution')}
@@ -43,13 +43,13 @@ function Nav () {
                     </div>
                 </div>
                 <div className="nav-item dropdown">
-                    <Link to="/events">≡ {t('events')}</Link>
+                    <Link to="/events">{t('events')}</Link>
                 </div>
                 <div className="nav-item dropdown">
-                    <span className="nav-link">≡ {t('resources')}</span>
+                    <span className="nav-link">{t('resources')}</span>
                 </div>
                 <div className="nav-item dropdown">
-                    <span className="nav-link">≡ {t('contacts')}</span>
+                    <span className="nav-link">{t('contacts')}</span>
                 </div>
             </div>
         </nav>

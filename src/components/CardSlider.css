@@ -1,0 +1,52 @@
+.cardslider {
+    margin: 0 10%;
+}
+
+.item {
+    height: 30rem;
+    min-width: 50rem;
+    padding: 40px;
+}
+
+.item img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 1rem;
+    pointer-events: none;
+}
+
+.inner-carousel {
+    display: flex;
+
+}
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .cardslider {
+        margin: 5% 5% 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item {
+        min-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .item img {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardslider {
+        margin: 5% 2% 5%;
+    }
+}

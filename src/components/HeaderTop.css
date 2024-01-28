@@ -10,10 +10,11 @@
 }
 
 .LanguageSwitcher button {
-    padding: 8.5px 12px;
+    padding: 5px 10px;
     font-size: 14px;
     cursor: pointer;
-    border: 1px solid #63972f;
+    border: #63972f;
+    
     background-color: #63972f;
     color: black;
     transition: background-color 0.3s, color 0.3s;

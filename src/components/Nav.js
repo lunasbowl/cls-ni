@@ -45,10 +45,10 @@ function Nav () {
                     <Link to="/events">{t('events')}</Link>
                 </div>
                 <div className="nav-item dropdown">
-                    <span className="nav-link">{t('resources')}</span>
+                    <Link to="/resources">{t('resources')}</Link>
                 </div>
                 <div className="nav-item dropdown">
-                    <span className="nav-link">{t('contacts')}</span>
+                    <Link to="/contacts">{t('contacts')}</Link>
                 </div>
             </div>
         </nav>

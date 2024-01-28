@@ -12,6 +12,7 @@ import Events from './pages/Events';
 import ManagementCommittee from './pages/ManagementCommittee';
 import ParentCommittee from './pages/ParentCommittee';
 import Teachers from './pages/Teachers';
+import Contacts from './pages/Contacts';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about-management-committee" element={<ManagementCommittee />}></Route>
         <Route path="/about-parent-committee" element={<ParentCommittee />}></Route>
         <Route path="/about-faculty-and-staff" element={<Teachers />}></Route>
+        <Route path="/contacts" element={<Contacts />}></Route>
       </Routes>
       <Footer />
     </I18nextProvider>

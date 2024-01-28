@@ -2,9 +2,26 @@ footer {
     background-color: #372ea4;
     color: #fff;
     padding: 20px;
-  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.qr-code {
+  margin-left: 80px;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-content img {
+  width: 8vw;
+}
 
 .footer-bottom {
     font-size: 10px;
     text-align: right;
 }
+

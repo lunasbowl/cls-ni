@@ -1,0 +1,44 @@
+.policy {
+    padding-left: 50px;
+    padding-right:50px;
+    padding-bottom: 25px;
+    margin-top: -5rem;
+}
+
+.policy-title {
+    text-align: center;
+}
+
+.policy-table-of-content ol {
+    list-style-type: decimal;
+}
+
+.policy-table-of-content button {
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: blue;
+}
+
+.section-a ol {
+    list-style-type: circle;
+}
+
+.section-b ol {
+    list-style-type: circle;
+}
+
+@media screen and (max-width: 768px) {
+    .policy {
+        padding: 20px;
+    }
+    .policy-title {
+        font-size: medium;
+    }
+    .policy-table-of-content button {
+        text-align: left;
+    }
+}

@@ -25,3 +25,18 @@ footer {
     text-align: right;
 }
 
+@media only screen and (max-width: 768px) {
+  .footer-section {
+    font-size: 10px;
+  }
+  .qr-code {
+    font-size: 8px;
+    margin-left: 50px;
+  }
+  .qr-code img {
+    max-width: 8vw;
+  }
+  .footer-bottom {
+    font-size: 6px;
+  }
+}

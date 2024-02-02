@@ -10,7 +10,7 @@ function Header () {
         <header>
             <HeaderTop />
             <div className="header-content">
-                <Link to="/">
+                <Link to="/" onClick={() => {window.location.href="/"}}>
                     <img className="clsni-logo" src={Logo} alt="CLSNI Logo" />
                 </Link>
                 <Nav />

@@ -12,6 +12,10 @@ function Nav () {
         setIsNavOpen(!isNavOpen);
     };
 
+    const scrollToTop = () => {
+        window.scrollTo(0,0);
+    };
+
 
     return (
         <nav className={`nav ${isNavOpen ? "active" : ""}`}>
@@ -20,33 +24,33 @@ function Nav () {
             </button>
             <div className="nav-items">
                 <div className="nav-item dropdown">
-                    <Link to="/" onClick={() => {window.location.href="/"}}>{t('home')}</Link>
+                    <Link to="/" onClick={scrollToTop}>{t('home')}</Link>
                 </div>
                 <div className="nav-item dropdown">
                     <span className="nav-link">{t('about')}</span>
                     <div className="dropdown-content">
-                        <Link to="/about-constitution" className="dropdown-item" onClick={() => {window.location.href="/about-constitution"}}>
+                        <Link to="/about-constitution" className="dropdown-item" onClick={scrollToTop}>
                             {t('constitution')}
                         </Link>
-                        <Link to="/about-history" className="dropdown-item" onClick={() => {window.location.href="/about-history"}}>
+                        <Link to="/about-history" className="dropdown-item" onClick={scrollToTop}>
                             {t('history')}
                         </Link>
-                        <Link to="/about-management-committee" className="dropdown-item" onClick={() => {window.location.href="/about-management-committee"}}>
+                        <Link to="/about-management-committee" className="dropdown-item" onClick={scrollToTop}>
                             {t('management-committee')}
                         </Link>
-                        <Link to="/about-faculty-and-staff" className="dropdown-item" onClick={() => {window.location.href="/about-faculty-and-staff"}}>
+                        <Link to="/about-faculty-and-staff" className="dropdown-item" onClick={scrollToTop}>
                             {t('teachers')}
                         </Link>
-                        <Link to="/about-parent-committee" className="dropdown-item" onClick={() => {window.location.href="/about-parent-committee"}}>
+                        <Link to="/about-parent-committee" className="dropdown-item" onClick={scrollToTop}>
                             {t('parent-committee')}
                         </Link>
                     </div>
                 </div>
                 <div className="nav-item dropdown">
-                    <Link to="/events" onClick={() => {window.location.href="/events"}}>{t('events')}</Link>
+                    <Link to="/events" onClick={scrollToTop}>{t('events')}</Link>
                 </div>
                 <div className="nav-item dropdown">
-                    <Link to="/policy" onClick={() => {window.location.href="/policy"}}>{t('policy')}</Link>
+                    <Link to="/policy" onClick={scrollToTop}>{t('policy')}</Link>
                 </div>
             </div>
         </nav>

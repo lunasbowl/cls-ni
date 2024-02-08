@@ -9,6 +9,8 @@ function HomePageEn () {
 
     const { t } = useTranslation();
 
+    console.log (t('welcome'));
+
     return (
         <>
             <div className="hp-gallery">

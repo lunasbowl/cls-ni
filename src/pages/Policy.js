@@ -13,7 +13,7 @@ function Policy () {
     const targetRef8 = useRef(null);
     const targetRef9 = useRef(null);
 
-    const navbarHeight = 161;
+    const navbarHeight = 145;
 
     const scrollToTarget = (targetRef) => {
         if (targetRef) {

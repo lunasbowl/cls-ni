@@ -17,10 +17,12 @@
 
 .card-title {
     margin: 0.5rem 5%;
+    font-size: large;
 }
 
 .card-description {
     margin: 0.5rem 5%;
+    font-size: medium;
 }
 
 .card-btn {

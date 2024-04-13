@@ -11,14 +11,14 @@ function HomePageEn () {
 
     return (
         <>
-            <div className="hp-gallery">
-                <Gallery />
-            </div>
             <div className="heading-h1">
                 <h1 className="welcome">{t('welcome')}</h1>
                 <h1 className="line">—</h1>
                 <h1 className="welcome-school">{t('school')}</h1>
                 <p>- {t('slogan')} -</p>
+            </div>
+            <div className="hp-gallery">
+                <Gallery />
             </div>
             <div className="event-cards" id="eventsSection">
                 <div className="col">

@@ -14,6 +14,7 @@ function Nav () {
 
     const scrollToTop = () => {
         window.scrollTo(0,0);
+        setIsNavOpen(false);
     };
 
 

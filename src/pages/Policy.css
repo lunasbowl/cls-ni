@@ -41,4 +41,7 @@
     .policy-table-of-content button {
         text-align: left;
     }
+    .policy-main p {
+        text-align: justify;
+    }
 }

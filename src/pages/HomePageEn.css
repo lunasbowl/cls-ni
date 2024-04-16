@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
+    padding-top: 25px;
 }
 
 .line {
@@ -23,7 +24,6 @@
 }
 
 .event-cards {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,12 @@
     align-items: flex-start;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 768px) {
+
+    .homepage {
+        position: relative;
+        padding-top: 50px;
+    }
 
     .welcome {
         font-size: 2rem;

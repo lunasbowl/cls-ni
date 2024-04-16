@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.navbar-toggle {
+    display: none;
+}
+
 .nav-item {
     text-decoration: none;
     color: black;
@@ -67,6 +71,8 @@
     .nav.active .nav-items {
         display: flex;
         flex-direction: column;
+        z-index: 2;
+        background: white;
     }
 
     .navbar-toggle {
@@ -78,6 +84,7 @@
         border: none;
         text-align: center;
         font-size: 16px;
+        z-index: 2;
     }
 
     .navbar-toggle:hover {
@@ -91,8 +98,3 @@
     }
 }
 
-@media only screen and (min-width: 769px) {
-    .navbar-toggle {
-        display: none;
-    }
-}

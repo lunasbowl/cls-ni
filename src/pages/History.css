@@ -14,4 +14,18 @@
 
 .history-main p {
     text-indent: 30px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .about-history {
+        padding: 10px;
+        padding-top: 80px;
+    }
+    .history-title h1 {
+        font-size: 1.5rem;
+    }
+    .history-title h2 {
+        font-size: large;
+    }
 }

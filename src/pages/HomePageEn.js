@@ -10,7 +10,7 @@ function HomePageEn () {
     const { t } = useTranslation();
 
     return (
-        <>
+        <div className="homepage">
             <div className="heading-h1">
                 <h1 className="welcome">{t('welcome')}</h1>
                 <h1 className="line">—</h1>
@@ -76,7 +76,7 @@ function HomePageEn () {
                     />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

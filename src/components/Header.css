@@ -31,8 +31,11 @@ header {
     }
 
     .clsni-logo {
-        width: 50%;
+        display: flex;
+        position: absolute;
         align-items: center;
+        z-index: 1;
+        padding: 5px;
     }
 
 }

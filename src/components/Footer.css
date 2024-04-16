@@ -2,6 +2,7 @@ footer {
     background-color: #372ea4;
     color: #fff;
     padding: 20px;
+    padding-bottom: 10px;
 }
 
 .footer-content {
@@ -27,16 +28,19 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .footer-section {
-    font-size: 10px;
+    font-size: 8px;
   }
   .qr-code {
     font-size: 8px;
     margin-left: 50px;
   }
   .qr-code img {
-    max-width: 8vw;
+    width: 70px;
   }
   .footer-bottom {
     font-size: 6px;
+  }
+  .footer-section p {
+    line-height: 1;
   }
 }

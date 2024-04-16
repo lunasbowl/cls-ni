@@ -10,6 +10,5 @@ import image9 from './assets/school staff/gcse.jpg';
 import image10 from './assets/school staff/alevel.jpg';
 import image11 from './assets/school staff/cantonese.jpg';
 import image12 from './assets/school staff/speaking.jpg';
-import image13 from './assets/school staff/sinology.jpg';
 
-export default [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13];
+export default [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12];

@@ -3,8 +3,8 @@ import './App.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n';
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from './components/Header';
+import Footer from './components/Footer';
 import HomePageEn from './pages/HomePageEn';
 import Constitution from './pages/Constitution';
 import History from './pages/History';
@@ -13,24 +13,44 @@ import ManagementCommittee from './pages/ManagementCommittee';
 import ParentCommittee from './pages/ParentCommittee';
 import Teachers from './pages/Teachers';
 import Policy from './pages/Policy';
+import HiringPage from './pages/HiringPage';
 
 function App() {
   return (
     <>
-    <I18nextProvider i18n={i18n}>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePageEn />}></Route>
-        <Route path="/about-constitution" element={<Constitution />}></Route>
-        <Route path="/about-history" element={<History />}></Route>
-        <Route path="/events" element={<Events />}></Route>
-        <Route path="/about-management-committee" element={<ManagementCommittee />}></Route>
-        <Route path="/about-parent-committee" element={<ParentCommittee />}></Route>
-        <Route path="/about-faculty-and-staff" element={<Teachers />}></Route>
-        <Route path="/policy" element={<Policy />}></Route>
-      </Routes>
-      <Footer />
-    </I18nextProvider>
+      <I18nextProvider i18n={i18n}>
+        <Header />
+        <Routes>
+          <Route
+            path='/'
+            element={<HomePageEn />}></Route>
+          <Route
+            path='/about-constitution'
+            element={<Constitution />}></Route>
+          <Route
+            path='/about-history'
+            element={<History />}></Route>
+          <Route
+            path='/events'
+            element={<Events />}></Route>
+          <Route
+            path='/about-management-committee'
+            element={<ManagementCommittee />}></Route>
+          <Route
+            path='/about-parent-committee'
+            element={<ParentCommittee />}></Route>
+          <Route
+            path='/about-faculty-and-staff'
+            element={<Teachers />}></Route>
+          <Route
+            path='/policy'
+            element={<Policy />}></Route>
+          <Route
+            path='/hiring'
+            element={<HiringPage />}></Route>
+        </Routes>
+        <Footer />
+      </I18nextProvider>
     </>
   );
 }

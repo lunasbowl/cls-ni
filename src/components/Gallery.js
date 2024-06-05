@@ -9,6 +9,19 @@ function Gallery() {
 
   const images = [
     {
+      original: './gallery/enroll2024.jpg',
+      description: (
+        <div>
+          <a
+            href='https://mp.weixin.qq.com/s/JqDq8LeWK_qUTxNWQAi3-A?poc_token=HHeNYGajarWqVKfsFh-ssQq61WoDtUQdxFQDZsL2'
+            className='button'
+            target='_blank'>
+            {t('read-more')}
+          </a>
+        </div>
+      ),
+    },
+    {
       original: './gallery/hiring.jpg',
       description: (
         <div>

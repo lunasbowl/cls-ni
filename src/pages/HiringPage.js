@@ -45,11 +45,7 @@ function HiringPage() {
       <p>&#x2022; 具有一定的组织协调能力和团队意识。</p>
       <p>&#x2022; 具有一定的教学管理经验和能力优先。</p>
       <br />
-      <h2>四、上课地点、时间</h2>
-      <p>地点：Ulster University, Block BC, York Street, BT15 1AP</p>
-      <p>时间：每周日下午1-3点</p>
-      <br />
-      <h2>五、报名方式</h2>
+      <h2>四、报名方式</h2>
       <p>
         即日起即可报名，扫描网页下方二维码添加学校微信发送个人简历，或发送简历至邮箱：chinese.school.ni@gmail.com。
       </p>

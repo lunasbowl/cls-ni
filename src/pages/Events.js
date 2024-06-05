@@ -13,6 +13,10 @@ function Events() {
       name: '北爱中文学校招聘启事（2024-2025学年）🔝',
     },
     {
+      to: 'https://mp.weixin.qq.com/s/JqDq8LeWK_qUTxNWQAi3-A?poc_token=HHeNYGajarWqVKfsFh-ssQq61WoDtUQdxFQDZsL2',
+      name: '北爱中文学校2024-2025学年入学报名🔝',
+    },
+    {
       to: 'https://mp.weixin.qq.com/s?__biz=MzIyMjczNTU0MA==&mid=2247487146&idx=1&sn=12409d397124b5b09f66bae793f2f92b&chksm=e829b371df5e3a67fee11d2a93b911823e3fea175f72f8aa4b1d292793b0dee90f66710e5aed&token=252586387&lang=zh_CN#rd',
       name: '2023 - 2024 School Calendar',
     },

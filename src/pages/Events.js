@@ -21,6 +21,10 @@ function Events() {
       name: '2023 - 2024 School Calendar',
     },
     {
+      to: 'https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w',
+      name: t('event-title-7'),
+    },
+    {
       to: 'https://mp.weixin.qq.com/s?__biz=MzIyMjczNTU0MA==&mid=2247486175&idx=1&sn=8d4e7133ceaecb06ae94e518d1cd72c1&chksm=e829b704df5e3e128ecf51443828608ac8a6c93620cffbe4855aa9e4e624dfff3156699c58b0&token=1193322797&lang=zh_CN#rd',
       name: t('event-title-1'),
     },

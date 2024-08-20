@@ -22,6 +22,10 @@ function Events() {
     },
     {
       to: 'https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w',
+      name: `${t('event-title-8')} 🆕`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/RwNdHI29350rKXLVk63fng',
       name: t('event-title-7'),
     },
     {

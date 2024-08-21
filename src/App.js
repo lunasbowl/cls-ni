@@ -5,15 +5,15 @@ import i18n from './i18n/i18n';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePageEn from './pages/HomePageEn';
-import Constitution from './pages/Constitution';
-import History from './pages/History';
-import Events from './pages/Events';
-import ManagementCommittee from './pages/ManagementCommittee';
-import ParentCommittee from './pages/ParentCommittee';
-import Teachers from './pages/Teachers';
-import Policy from './pages/Policy';
-import HiringPage from './pages/HiringPage';
+import HomePage from './pages/HomePage';
+import Constitution from './pages/Constitution/Constitution';
+import History from './pages/History/History';
+import Events from './pages/Events/Events';
+import ManagementCommittee from './pages/ManagementCommittee/ManagementCommittee';
+import ParentCommittee from './pages/ParentCommittee/ParentCommittee';
+import Teachers from './pages/Teachers/Teachers';
+import Policy from './pages/Policy/Policy';
+import HiringPage from './pages/HiringPage/HiringPage';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<HomePageEn />}></Route>
+            element={<HomePage />}></Route>
           <Route
             path='/about-constitution'
             element={<Constitution />}></Route>

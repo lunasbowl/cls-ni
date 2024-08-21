@@ -3,9 +3,9 @@ import Gallery from '../components/Gallery';
 import { Card } from '../components/Card';
 
 import { useTranslation } from 'react-i18next';
-import './HomePageEn.css';
+import './HomePage.css';
 
-function HomePageEn() {
+function HomePage() {
   const { t } = useTranslation();
 
   return (
@@ -99,4 +99,4 @@ function HomePageEn() {
   );
 }
 
-export default HomePageEn;
+export default HomePage;

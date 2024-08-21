@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n';
@@ -17,8 +18,15 @@ import HiringPage from './pages/HiringPage/HiringPage';
 
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <I18nextProvider i18n={i18n}>
+        <Helmet>
+          <title>北爱中文学校 CLSNI</title>
+          <meta
+            name='description'
+            content='北爱中文学校官网 - Official Website of the Chinese Language School Northern Ireland.'
+          />
+        </Helmet>
         <Header />
         <Routes>
           <Route
@@ -51,7 +59,7 @@ function App() {
         </Routes>
         <Footer />
       </I18nextProvider>
-    </>
+    </HelmetProvider>
   );
 }
 

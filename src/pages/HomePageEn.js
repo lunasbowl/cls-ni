@@ -16,7 +16,6 @@ function HomePageEn() {
         <h1 className='line'>—</h1>
         <h1 className='welcome-school'>{t('school')}</h1>
         <p>- {t('slogan')} -</p>
-        <QuoteGenerator />
       </div>
       <div className='hp-gallery'>
         <Gallery />
@@ -78,6 +77,7 @@ function HomePageEn() {
             link='https://mp.weixin.qq.com/s?__biz=MzIyMjczNTU0MA==&mid=2247487629&idx=1&sn=3a499ac043c676f14013869b05cc3286&chksm=e829ad56df5e2440fc1a50224fa5164cd87c8815699870636654a62fa0df35ecb9c6638b1f4a&token=701621739&lang=zh_CN#rd'
           />
         </div>
+        <QuoteGenerator />
       </div>
     </div>
   );

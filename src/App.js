@@ -14,7 +14,8 @@ import ManagementCommittee from './pages/ManagementCommittee/ManagementCommittee
 import ParentCommittee from './pages/ParentCommittee/ParentCommittee';
 import Teachers from './pages/Teachers/Teachers';
 import Policy from './pages/Policy/Policy';
-import HiringPage from './pages/HiringPage/HiringPage';
+import HiringPage from './pages/Events/HiringPage/HiringPage';
+import SchoolStartPage from './pages/Events/SchoolStart2024/SchoolStart2024Page';
 
 function App() {
   return (
@@ -56,6 +57,9 @@ function App() {
           <Route
             path='/hiring'
             element={<HiringPage />}></Route>
+          <Route
+            path='/school-start-2024'
+            element={<SchoolStartPage />}></Route>
         </Routes>
         <Footer />
       </I18nextProvider>

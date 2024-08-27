@@ -1,42 +1,47 @@
 .event-section {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .recent-events {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .recent-events h1 {
-    color: #996734;
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: #996734;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .event-link {
-    color: #666;
-    display: block;
-    padding: 15px 30px;
-    text-decoration: none;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #666;
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .event-link:hover {
-    text-decoration: underline;
-    color: #333;
+  text-decoration: underline;
+  color: #333;
 }
 
 .event-link.active,
 .event-link:focus {
-    background-color: #996734;
-    color: #fff;
+  background-color: #996734;
+  color: #fff;
 }
 
 .event-link.active:hover,
 .event-link:focus:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .recent-events {
+    margin-top: 40px;
+  }
+}

@@ -9,30 +9,18 @@ function Gallery() {
 
   const images = [
     {
-      original: './gallery/enroll2024.jpg',
+      original: './gallery/school-start2024.jpg',
       description: (
         <div>
           <a
-            href='https://mp.weixin.qq.com/s/JqDq8LeWK_qUTxNWQAi3-A?poc_token=HHeNYGajarWqVKfsFh-ssQq61WoDtUQdxFQDZsL2'
-            className='button'
-            target='_blank'>
-            {t('read-more')}
-          </a>
-        </div>
-      ),
-    },
-    {
-      original: './gallery/hiring.jpg',
-      description: (
-        <div>
-          <a
-            href='/hiring'
+            href='/school-start-2024'
             className='button'>
             {t('read-more')}
           </a>
         </div>
       ),
     },
+
     {
       original: './gallery/gallery-1.jpg',
       description: (
@@ -47,6 +35,7 @@ function Gallery() {
         </div>
       ),
     },
+
     {
       original: './gallery/gallery-2.jpg',
       description: (
@@ -61,6 +50,7 @@ function Gallery() {
         </div>
       ),
     },
+
     {
       original: './gallery/gallery-3.jpg',
       description: (

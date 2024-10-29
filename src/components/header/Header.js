@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HeaderTop from './HeaderTop';
-import Nav from './Nav';
-import Logo from './assets/clsni-logo.png';
+import HeaderTop from '../header-top/HeaderTop';
+import Nav from '../nav/Nav';
+import Logo from '../assets/clsni-logo.png';
 import './Header.css';
 
 function Header() {

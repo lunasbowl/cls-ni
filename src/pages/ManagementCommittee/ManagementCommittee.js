@@ -1,6 +1,6 @@
 import React from 'react';
 import './ManagementCommittee.css';
-import TableComponent from '../../components/Table';
+import TableComponent from '../../components/table/Table';
 import { useTranslation } from 'react-i18next';
 
 function ManagementCommittee() {

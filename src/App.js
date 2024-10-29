@@ -4,8 +4,8 @@ import './App.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import HomePage from './pages/HomePage';
 import Constitution from './pages/Constitution/Constitution';
 import History from './pages/History/History';

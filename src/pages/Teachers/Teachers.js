@@ -1,5 +1,5 @@
 import React from 'react';
-import CardSlider from '../../components/CardSlider';
+import CardSlider from '../../components/card-slider/CardSlider';
 import './Teachers.css';
 import { useTranslation } from 'react-i18next';
 

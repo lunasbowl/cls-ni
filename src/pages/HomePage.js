@@ -1,6 +1,6 @@
 import React from 'react';
-import Gallery from '../components/Gallery';
-import { Card } from '../components/Card';
+import Gallery from '../components/gallery/Gallery';
+import { Card } from '../components/card/Card';
 
 import { useTranslation } from 'react-i18next';
 import './HomePage.css';

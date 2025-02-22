@@ -4,7 +4,9 @@ import LanguageSwitcher from '../language-switcher/LanguageSwitcher';
 
 function HeaderTop() {
   return (
-    <div className='header-top'>
+    <div
+      className='header-top'
+      role='banner'>
       <LanguageSwitcher />
     </div>
   );

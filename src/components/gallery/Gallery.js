@@ -9,19 +9,6 @@ function Gallery() {
 
   const images = [
     {
-      original: './gallery/school-start2024.jpg',
-      description: (
-        <div>
-          <a
-            href='/school-start-2024'
-            className='button'>
-            {t('read-more')}
-          </a>
-        </div>
-      ),
-    },
-
-    {
       original: './gallery/gallery-1.jpg',
       description: (
         <div>

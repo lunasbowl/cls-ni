@@ -9,12 +9,28 @@ function Events() {
 
   const links = [
     {
+      to: 'https://mp.weixin.qq.com/s/pE69FKuDhIgOAhgwrWojLA?token=985437952',
+      name: `${t('event-title-9')} 🆕`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/6ZudM6KPNnz01ojDi-qq6w?token=985437952',
+      name: `${t('event-title-10')} 🆕`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/xpq5ZTMzYsTh6kaNP3lZbA?token=985437952',
+      name: `${t('event-title-11')} 🆕`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/Db51aXJLbcvSdB16zZUgQA',
+      name: `${t('event-title-12')} 🆕`,
+    },
+    {
       to: '/school-start-2024',
-      name: '中文学校马上要开学啦！Chinese School Will Start Soon! 🔝',
+      name: '中文学校马上要开学啦！Chinese School Will Start Soon!',
     },
     {
       to: '/hiring',
-      name: '北爱中文学校招聘启事（2024-2025学年）🔝',
+      name: '北爱中文学校招聘启事（2024-2025学年）',
     },
     {
       to: 'https://mp.weixin.qq.com/s/JqDq8LeWK_qUTxNWQAi3-A?poc_token=HHeNYGajarWqVKfsFh-ssQq61WoDtUQdxFQDZsL2',
@@ -23,7 +39,7 @@ function Events() {
 
     {
       to: 'https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w',
-      name: `${t('event-title-8')} 🆕`,
+      name: `${t('event-title-8')}`,
     },
     {
       to: 'https://mp.weixin.qq.com/s/RwNdHI29350rKXLVk63fng',

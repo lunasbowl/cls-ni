@@ -1,50 +1,48 @@
 .cardslider {
-    margin: 0 10%;
+  margin: 0 10%;
 }
 
 .item {
-    height: 30rem;
-    min-width: 50rem;
-    padding: 40px;
+  height: 30rem;
+  min-width: 30rem;
+  padding: 40px;
 }
 
 .item img {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    border-radius: 1rem;
-    pointer-events: none;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+  pointer-events: none;
 }
 
 .inner-carousel {
-    display: flex;
-
+  display: flex;
 }
 
 .carousel {
-    cursor: grab;
-    overflow: hidden;
-
+  cursor: grab;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
-    .cardslider {
-        margin: 5% 5% 5%;
-    }
+  .cardslider {
+    margin: 5% 5% 5%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .item {
-        min-width: 100%;
-        height: 200px;
-        padding: 20px;
-    }
+  .item {
+    min-width: 100%;
+    height: 200px;
+    padding: 20px;
+  }
 
-    .item img {
-        border-radius: 0;
-    }
+  .item img {
+    border-radius: 0;
+  }
 
-    .cardslider {
-        margin: 5% 5% 5%;
-    }
+  .cardslider {
+    margin: 5% 5% 5%;
+  }
 }

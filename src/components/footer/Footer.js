@@ -10,9 +10,10 @@ export default function Footer() {
     <footer>
       <div className='footer-content'>
         <div className='footer-section'>
-          <p>1 Stranmillis Embankment</p>
-          <p>Belfast BT7 1GB</p>
-          <p>County Antrim, Northern Ireland</p>
+          <h4>School Location:</h4>
+          <p>Central Building, Stranmillis University College</p>
+          <p>Stranmillis Road</p>
+          <p>Belfast BT9 5DY</p>
           <p>E-mail: chinese.school.ni@gmail.com</p>
         </div>
         <div className='qr-code'>

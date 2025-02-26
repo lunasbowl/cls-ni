@@ -1,13 +1,18 @@
 footer {
-    background-color: #372ea4;
-    color: #fff;
-    padding: 20px;
-    padding-bottom: 10px;
+  background-color: #372ea4;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
+}
+.footer-section {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 14px;
 }
 
 .qr-code {
@@ -22,8 +27,8 @@ footer {
 }
 
 .footer-bottom {
-    font-size: 10px;
-    text-align: right;
+  font-size: 10px;
+  text-align: right;
 }
 
 @media only screen and (max-width: 768px) {

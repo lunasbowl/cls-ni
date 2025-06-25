@@ -9,6 +9,22 @@ function Gallery() {
 
   const images = [
     {
+      original: './gallery/enroll2025.jpeg',
+      description: (
+        <div>
+          {t('enroll')}
+          <br />
+          <a
+            href='https://mp.weixin.qq.com/s/SCIs32jAYujo9vAHXzYpWw?token=325217238'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='button'>
+            {t('read-more')}
+          </a>
+        </div>
+      ),
+    },
+    {
       original: './gallery/gallery-1.jpg',
       description: (
         <div>

@@ -40,6 +40,28 @@
   text-decoration: underline;
 }
 
+.pagination-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #63972f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
 @media (max-width: 768px) {
   .recent-events {
     margin-top: 40px;

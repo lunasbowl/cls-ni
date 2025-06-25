@@ -1,6 +1,7 @@
 {
     "school": "北爱尔兰中文学校(CLSNI)",
     "welcome": "欢迎进入",
+    "enroll": "2025年北爱尔兰中文学校开始报名",
 
     "home": "首页",
     "about": "关于",
@@ -48,6 +49,10 @@
     "event-title-10": "北爱中文学校学子在2024第二届少儿国学经典诵读大赛中斩获佳绩",
     "event-title-11": "北爱尔兰中文学校2024第三届冬季音乐会",
     "event-title-12": "北爱中文学校W5科技馆秋游",
+    "event-title-13": "北爱尔兰中文学校“我眼中的春天”主题活动获奖名单",
+    "event-title-14": "北爱尔兰中文学校学子在全球华人学生作文大赛中斩获佳绩",
+    "event-title-15": "北爱中文学校校庆游园会——建校42周年",
+    "event-title-16": "2025年北爱尔兰中文学校开始报名啦！",
 
     "event-description-1": "一场属于孩子们的冬日音乐会……",
     "event-description-2": "老师与孩子们共同欢度中国新年……",
@@ -61,6 +66,9 @@
     "event-description-10": "",
     "event-description-11": "",
     "event-description-12": "",
+    "event-description-13": "",
+    "event-description-14": "",
+    "event-description-15": "",
 
     "scan1": "扫描二维码添加北爱中文学校！",
     "scan2": "扫描二维码关注微信公众号！"

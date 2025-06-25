@@ -25,6 +25,25 @@ function HomePage() {
           id='eventsSection'>
           <div className='col'>
             <Card
+              imgSrc={require('../components/assets/events/42nd-anniversary.jpg')}
+              imgAlt='Card Image 15'
+              title={t('event-title-15')}
+              description={t('event-description-15')}
+              buttonText={t('read-more')}
+              link='https://mp.weixin.qq.com/s/UeGc0BigdXQSx26_WsZFMA'
+            />
+            <Card
+              imgSrc={require('../components/assets/events/spring-writing.jpg')}
+              imgAlt='Card Image 13'
+              title={t('event-title-13')}
+              description={t('event-description-13')}
+              buttonText={t('read-more')}
+              link='https://mp.weixin.qq.com/s/0y3ccpJJLuqw1V4rJjywfQ?token=325217238'
+            />
+          </div>
+
+          <div className='col'>
+            <Card
               imgSrc={require('../components/assets/events/shenian.jpeg')}
               imgAlt='Card Image 9'
               title={t('event-title-9')}
@@ -51,30 +70,12 @@ function HomePage() {
               link='https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w'
             />
             <Card
-              imgSrc={require('../components/assets/events/langsongfusai.jpeg')}
-              imgAlt='Card Image 7'
-              title={t('event-title-7')}
-              description={t('event-description-7')}
-              buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s/RwNdHI29350rKXLVk63fng'
-            />
-          </div>
-          <div className='col'>
-            <Card
               imgSrc={require('../components/assets/events/winter-music.jpg')}
               imgAlt='Card Image 1'
               title={t('event-title-1')}
               description={t('event-description-1')}
               buttonText={t('read-more')}
               link='https://mp.weixin.qq.com/s?__biz=MzIyMjczNTU0MA==&mid=2247487331&idx=1&sn=3b4eaf58e9778b4893ad7855353a95f7&chksm=e829b2b8df5e3bae8af48e7b0bbd01e4c7288ac8bcf773728e1b96e42eeaa325d4a3c1a9e29f&token=1193322797&lang=zh_CN#rd'
-            />
-            <Card
-              imgSrc={require('../components/assets/events/huayinfeiyang.jpg')}
-              imgAlt='Card Image 3'
-              title={t('event-title-3')}
-              description={t('event-description-3')}
-              buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s?__biz=MzIyMjczNTU0MA==&mid=2247487410&idx=1&sn=0fc6b9866ab3b792881e720b80cf13c7&chksm=e829b269df5e3b7f6a48e7afe0fc2415b1e8f8f7b5c4a2f77afc4cba91e20988433c7217554e&token=1193322797&lang=zh_CN#rd'
             />
           </div>
           <div className='col'>

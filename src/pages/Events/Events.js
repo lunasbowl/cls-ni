@@ -1,33 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Events.css';
-
 import { Link } from 'react-router-dom';
 
 function Events() {
   const { t } = useTranslation();
+  const [currentPage, setCurrentPage] = useState(1);
+  const linksPerPage = 10;
 
   const links = [
     {
+      to: 'https://mp.weixin.qq.com/s/SCIs32jAYujo9vAHXzYpWw?token=325217238',
+      name: `${t('event-title-16')} 🆕️‍🔥`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/UeGc0BigdXQSx26_WsZFMA',
+      name: `${t('event-title-15')} 🆕`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/BEY6HTcJF4Dr5DSBPy1NMw',
+      name: `${t('event-title-14')} 🆕`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/0y3ccpJJLuqw1V4rJjywfQ?token=325217238',
+      name: `${t('event-title-13')} 🆕`,
+    },
+    {
       to: 'https://mp.weixin.qq.com/s/pE69FKuDhIgOAhgwrWojLA?token=985437952',
-      name: `${t('event-title-9')} 🆕`,
+      name: `${t('event-title-9')} `,
     },
     {
       to: 'https://mp.weixin.qq.com/s/6ZudM6KPNnz01ojDi-qq6w?token=985437952',
-      name: `${t('event-title-10')} 🆕`,
+      name: `${t('event-title-10')} `,
     },
     {
       to: 'https://mp.weixin.qq.com/s/xpq5ZTMzYsTh6kaNP3lZbA?token=985437952',
-      name: `${t('event-title-11')} 🆕`,
+      name: `${t('event-title-11')} `,
     },
     {
       to: 'https://mp.weixin.qq.com/s/Db51aXJLbcvSdB16zZUgQA',
-      name: `${t('event-title-12')} 🆕`,
+      name: `${t('event-title-12')} `,
     },
-    {
+    /* {
       to: '/school-start-2024',
       name: '中文学校马上要开学啦！Chinese School Will Start Soon!',
-    },
+    }, */
     {
       to: '/hiring',
       name: '北爱中文学校招聘启事（2024-2025学年）',
@@ -71,9 +88,18 @@ function Events() {
     },
   ];
 
-  const imageLink = {
-    imageSrc: '../../public/hiring-img.jpg',
-    altText: 'HIRING2024',
+  // Pagination math
+  const indexOfLastLink = currentPage * linksPerPage;
+  const indexOfFirstLink = indexOfLastLink - linksPerPage;
+  const currentLinks = links.slice(indexOfFirstLink, indexOfLastLink);
+  const totalPages = Math.ceil(links.length / linksPerPage);
+
+  const goToNextPage = () => {
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  };
+
+  const goToPrevPage = () => {
+    setCurrentPage((prev) => Math.max(prev - 1, 1));
   };
 
   return (
@@ -81,8 +107,9 @@ function Events() {
       <div className='recent-events'>
         <h1>{t('recent-events')}</h1>
       </div>
+
       <div>
-        {links.map((link) => (
+        {currentLinks.map((link) => (
           <Link
             key={link.name}
             to={link.to}
@@ -92,6 +119,22 @@ function Events() {
             {link.name}
           </Link>
         ))}
+      </div>
+
+      <div className='pagination-controls'>
+        <button
+          onClick={goToPrevPage}
+          disabled={currentPage === 1}>
+          &laquo;
+        </button>
+        <span>
+          {currentPage} / {totalPages}
+        </span>
+        <button
+          onClick={goToNextPage}
+          disabled={currentPage === totalPages}>
+          &raquo;
+        </button>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 {
     "school": "Chinese Language School Northern Ireland(CLSNI)",
     "welcome": "Welcome To",
+    "enroll": "Enrollment for 2025 is now open!",
 
     "home": "Home",
     "about": "About",
@@ -48,6 +49,10 @@
     "event-title-10": "Children's Classical Chinese Classics Recitation Competition 2024",
     "event-title-11": "Winter Music Concert 2024",
     "event-title-12": "CLSNI Autumn Trip to W5 Science Museum",
+    "event-title-13": "CLSNI 'Spring in My Eyes' Theme Activity Award Winners",
+    "event-title-14": "CLSNI Students Achieve Success in Global Chinese Student Essay Competition",
+    "event-title-15": "CLSNI 42nd Anniversary Celebration",
+    "event-title-16": "CLSNI Enrollment for 2025 Now Open!",
 
     "event-description-1": "A concert by students of our school...",
     "event-description-2": "Teachers and students welcome the New Year...",
@@ -61,6 +66,9 @@
     "event-description-10": "",
     "event-description-11": "",
     "event-description-12": "",
+    "event-description-13": "",
+    "event-description-14": "",
+    "event-description-15": "",
 
     "scan1": "Scan to add CLSNI on Wechat!",
     "scan2": "Scan to follow CLSNI on Wechat!"

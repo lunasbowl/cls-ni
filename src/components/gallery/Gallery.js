@@ -8,7 +8,7 @@ function Gallery() {
   const { t } = useTranslation();
 
   const images = [
-    {
+    /* {
       original: './gallery/enroll2025.jpeg',
       description: (
         <div>
@@ -23,7 +23,7 @@ function Gallery() {
           </a>
         </div>
       ),
-    },
+    }, */
     {
       original: './gallery/gallery-1.jpg',
       description: (

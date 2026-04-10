@@ -33,51 +33,53 @@ function HomePage() {
               link='https://mp.weixin.qq.com/s/UeGc0BigdXQSx26_WsZFMA'
             />
             <Card
-              imgSrc={require('../components/assets/events/spring-writing.jpg')}
-              imgAlt='Card Image 13'
-              title={t('event-title-13')}
-              description={t('event-description-13')}
+              imgSrc={require('../components/assets/events/myname.png')}
+              imgAlt='Card Image 19'
+              title={t('event-title-19')}
+              description={t('event-description-19')}
               buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s/0y3ccpJJLuqw1V4rJjywfQ?token=325217238'
+              link='https://mp.weixin.qq.com/s/yADRD6lneMyvGJ-gdVCMaA'
             />
           </div>
 
           <div className='col'>
             <Card
-              imgSrc={require('../components/assets/events/shenian.jpeg')}
-              imgAlt='Card Image 9'
-              title={t('event-title-9')}
-              description={t('event-description-9')}
+              imgSrc={require('../components/assets/events/manian.jpeg')}
+              imgAlt='Card Image 20'
+              title={t('event-title-20')}
+              description={t('event-description-20')}
               buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w'
+              link='https://mp.weixin.qq.com/s/4N2yjFGJpLHzgPCDjWZmYA'
             />
             <Card
-              imgSrc={require('../components/assets/events/w5.jpeg')}
-              imgAlt='Card Image 12'
-              title={t('event-title-12')}
-              description={t('event-description-12')}
+              imgSrc={require('../components/assets/events/halloween.jpg')}
+              imgAlt='Card Image 22'
+              title={t('event-title-22')}
+              description={t('event-description-22')}
               buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w'
+              link='https://mp.weixin.qq.com/s/ZgSOejRfyPJvIrrG7h6XWw'
             />
           </div>
+
           <div className='col'>
             <Card
-              imgSrc={require('../components/assets/events/yunnan2024.jpeg')}
-              imgAlt='Card Image 8'
-              title={t('event-title-8')}
-              description={t('event-description-8')}
+              imgSrc={require('../components/assets/events/nanyuecamp.jpeg')}
+              imgAlt='Card Image 18'
+              title={t('event-title-18')}
+              description={t('event-description-18')}
               buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s/aM-SBsqott07-bHDtVmz9w'
+              link='https://mp.weixin.qq.com/s/vSCXgqgBFusRZ2QeA0PoXw'
             />
             <Card
-              imgSrc={require('../components/assets/events/winter-music.jpg')}
-              imgAlt='Card Image 1'
-              title={t('event-title-1')}
-              description={t('event-description-1')}
+              imgSrc={require('../components/assets/events/winter-music.jpeg')}
+              imgAlt='Card Image 21'
+              title={t('event-title-21')}
+              description={t('event-description-21')}
               buttonText={t('read-more')}
-              link='https://mp.weixin.qq.com/s?__biz=MzIyMjczNTU0MA==&mid=2247487331&idx=1&sn=3b4eaf58e9778b4893ad7855353a95f7&chksm=e829b2b8df5e3bae8af48e7b0bbd01e4c7288ac8bcf773728e1b96e42eeaa325d4a3c1a9e29f&token=1193322797&lang=zh_CN#rd'
+              link='https://mp.weixin.qq.com/s/pbYfDMGfyFBeAmaparnxbQ'
             />
           </div>
+
           <div className='col'>
             <Card
               imgSrc={require('../components/assets/events/opera.jpg')}

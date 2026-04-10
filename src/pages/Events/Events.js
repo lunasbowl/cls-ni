@@ -9,21 +9,45 @@ function Events() {
   const linksPerPage = 10;
 
   const links = [
-    {
+    /* {
       to: 'https://mp.weixin.qq.com/s/SCIs32jAYujo9vAHXzYpWw?token=325217238',
       name: `${t('event-title-16')} 🆕️‍🔥`,
+    }, */
+    {
+      to: 'https://mp.weixin.qq.com/s/yADRD6lneMyvGJ-gdVCMaA',
+      name: `${t('event-title-19')} 🆕️`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/4N2yjFGJpLHzgPCDjWZmYA',
+      name: `${t('event-title-20')} 🆕️`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/pbYfDMGfyFBeAmaparnxbQ',
+      name: `${t('event-title-21')} 🆕️`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/ZgSOejRfyPJvIrrG7h6XWw',
+      name: `${t('event-title-22')} 🆕️`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/vSCXgqgBFusRZ2QeA0PoXw',
+      name: `${t('event-title-18')} 🆕️`,
+    },
+    {
+      to: 'https://mp.weixin.qq.com/s/uFNSKDOwX-aCxzZg7w5xfA',
+      name: `${t('event-title-17')} 🆕️`,
     },
     {
       to: 'https://mp.weixin.qq.com/s/UeGc0BigdXQSx26_WsZFMA',
-      name: `${t('event-title-15')} 🆕`,
+      name: `${t('event-title-15')} `,
     },
     {
       to: 'https://mp.weixin.qq.com/s/BEY6HTcJF4Dr5DSBPy1NMw',
-      name: `${t('event-title-14')} 🆕`,
+      name: `${t('event-title-14')} `,
     },
     {
       to: 'https://mp.weixin.qq.com/s/0y3ccpJJLuqw1V4rJjywfQ?token=325217238',
-      name: `${t('event-title-13')} 🆕`,
+      name: `${t('event-title-13')} `,
     },
     {
       to: 'https://mp.weixin.qq.com/s/pE69FKuDhIgOAhgwrWojLA?token=985437952',

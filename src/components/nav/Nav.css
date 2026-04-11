@@ -8,23 +8,52 @@
 
 .nav-item {
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
     padding: 8px 16px;
     position: relative;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    letter-spacing: 0.03em;
+    transition: color var(--transition-fast);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+    border-radius: var(--radius-full);
 }
 
 .nav-item:hover {
-    background-color: #85bc4d;
-    color: white;
+    background-color: transparent;
+    color: var(--color-accent-dark);
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-item:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
 .nav-item a {
     text-decoration: none;
-    color: black;
+    color: inherit;
+    font-weight: 600;
 }
 
 .nav-item a:hover {
-    color: white;
+    color: inherit;
 }
 
 .dropdown {
@@ -39,27 +68,44 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-
-    font-size: 1rem;
+    background-color: var(--color-surface-card);
+    min-width: 180px;
+    border: 3px solid var(--color-text);
+    border-radius: var(--radius-lg);
+    box-shadow: 6px 6px 0 0 var(--color-primary);
+    overflow: hidden;
+    z-index: var(--z-dropdown);
+    font-size: var(--text-sm);
+    top: calc(100% + 4px);
 }
+
 
 .dropdown-item {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: black;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-weight: 500;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
 }
 
 .dropdown-item:hover {
-    background-color: #63972f;
-    color: white;
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-item:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: -2px;
+}
+
+.dropdown.dropdown-open .dropdown-content {
     display: block;
 }
 
@@ -71,30 +117,55 @@
     .nav.active .nav-items {
         display: flex;
         flex-direction: column;
-        z-index: 2;
-        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: var(--z-dropdown);
+        background: var(--color-surface-card);
+        border: 3px solid var(--color-text);
+        border-top: none;
+        box-shadow: 4px 4px 0 0 var(--color-primary);
     }
 
     .navbar-toggle {
         display: block;
-        background-color: #372ea4;
-        color: white;
+        background-color: var(--color-primary);
+        color: var(--color-text-inverse);
         cursor: pointer;
-        padding: 10px;
-        border: none;
+        padding: 10px 16px;
+        border: 2px solid var(--color-text);
+        border-radius: var(--radius-md);
+        box-shadow: 3px 3px 0 0 var(--color-text);
         text-align: center;
-        font-size: 16px;
+        font-size: var(--text-lg);
+        font-family: var(--font-primary);
+        font-weight: 700;
         z-index: 2;
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     }
 
     .navbar-toggle:hover {
-        background-color: #372ea4;
-        color: white;
-        transition: background-color 0.3s, color 0.3s
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0 0 var(--color-text);
     }
 
+    .navbar-toggle:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+
+    /* Always show sub-items in mobile nav (touch devices can't :hover) */
     .dropdown-content {
+        display: block;
         position: relative;
+        border: none;
+        border-top: 1px solid var(--color-border);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .nav-item::after {
+        display: none;
     }
 }
-

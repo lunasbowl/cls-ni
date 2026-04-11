@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start:*)",
+      "WebFetch(domain:colorful-beige.vercel.app)"
+    ]
+  }
+}

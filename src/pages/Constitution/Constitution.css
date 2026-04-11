@@ -2,15 +2,21 @@
     display: flex;
     flex-direction: column;
     padding: 50px;
+    font-family: var(--font-primary);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .constitution-title h1 {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     text-align: center;
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 .about-constitution h2 {
     line-height: 1.5;
+    color: var(--color-warm);
 }
 
 .about-constitution li, p {
@@ -32,9 +38,9 @@ ol {
         padding-top: 90px;
     }
     .constitution-title h1 {
-        font-size: large;
+        font-size: var(--text-xl);
     }
     .about-constitution h2 {
-        font-size: medium;
+        font-size: var(--text-base);
     }
 }

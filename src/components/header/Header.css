@@ -1,41 +1,43 @@
 /* Header.css */
 
 header {
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    z-index: 1000;
+    background-color: var(--color-surface-card);
+    z-index: var(--z-header);
+    border-bottom: 3px solid var(--color-text);
+    box-shadow: 0 4px 0 0 var(--color-primary);
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--space-2) 0;
 }
 
 .clsni-logo {
-        margin-left: 100px;
-        width: 50%;
-        max-width: 400px;
-        height: auto;
+    margin-left: 60px;
+    width: 50%;
+    max-width: 360px;
+    height: auto;
+    transition: transform var(--transition-base);
+}
+
+.clsni-logo:hover {
+    transform: scale(1.02);
 }
 
 @media only screen and (max-width: 768px) {
-
-    header {
-        position: relative;
-        margin-top: -10rem;
+    .header-content {
+        padding: var(--space-2) var(--space-4);
     }
 
     .clsni-logo {
-        display: flex;
-        position: absolute;
-        align-items: center;
-        z-index: 1;
-        padding: 5px;
+        width: 150px;
+        max-width: 150px;
+        margin-left: 0;
     }
-
 }

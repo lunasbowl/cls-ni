@@ -1,51 +1,96 @@
 footer {
-  background-color: #372ea4;
-  color: #fff;
-  padding: 20px;
-  padding-bottom: 10px;
+  background: var(--color-primary);
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: var(--color-text-inverse);
+  padding: var(--space-10) var(--space-8) var(--space-6);
+  border-top: 3px solid var(--color-text);
+  font-family: var(--font-primary);
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
+  gap: var(--space-8);
+  align-items: flex-start;
 }
+
 .footer-section {
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 14px;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.footer-section h4 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin: 0 0 var(--space-3) 0;
+  color: var(--color-accent-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-section p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .qr-code {
-  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: var(--space-2);
   text-align: center;
-  font-size: 12px;
+  font-size: var(--text-xs);
 }
 
-.footer-content img {
-  width: 8vw;
+.qr-code img {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-md);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 4px 0 0 var(--color-accent-dark);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.qr-code img:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--color-accent-dark);
+}
+
+.qr-code p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: var(--text-xs);
 }
 
 .footer-bottom {
-  font-size: 10px;
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: var(--text-xs);
   text-align: right;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media only screen and (max-width: 768px) {
-  .footer-section {
-    font-size: 8px;
+  footer {
+    padding: var(--space-6) var(--space-4) var(--space-4);
   }
-  .qr-code {
-    font-size: 8px;
-    margin-left: 50px;
+  .footer-content {
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+  .footer-section {
+    font-size: var(--text-xs);
   }
   .qr-code img {
     width: 70px;
+    height: 70px;
   }
   .footer-bottom {
-    font-size: 6px;
+    font-size: var(--text-xs);
   }
   .footer-section p {
-    line-height: 1;
+    line-height: 1.5;
   }
 }

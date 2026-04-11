@@ -1,16 +1,112 @@
-
-
-.teacher h1 {
-    text-align: center;
+.teacher {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+  font-family: var(--font-primary);
 }
 
-.teacher p {
-    margin: 0 0 10%;
-    text-align: center;
+.teacher h1 {
+  text-align: center;
+  color: var(--color-primary);
+  font-weight: 800;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-10);
+  letter-spacing: -0.02em;
+}
+
+/* Category sections */
+.teacher-section {
+  margin-bottom: var(--space-12);
+  padding: 0 var(--space-10);
+}
+
+.teacher-section-heading {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-text-inverse);
+  background: var(--color-primary);
+  display: inline-block;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--color-text);
+  box-shadow: 4px 4px 0 0 var(--color-text);
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.01em;
+}
+
+/* Photo grid */
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-5);
+}
+
+.teacher-photo {
+  border-radius: var(--radius-xl);
+  border: 3px solid var(--color-text);
+  box-shadow: 6px 6px 0 0 var(--color-primary);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  background: var(--color-surface-subtle);
+}
+
+/* Alternate slight rotations for a playful feel */
+.teacher-photo:nth-child(4n+1) { transform: rotate(-1.2deg); }
+.teacher-photo:nth-child(4n+2) { transform: rotate(0.8deg); }
+.teacher-photo:nth-child(4n+3) { transform: rotate(-0.6deg); }
+.teacher-photo:nth-child(4n+4) { transform: rotate(1deg); }
+
+.teacher-photo:hover {
+  transform: rotate(0deg) translate(3px, 3px);
+  box-shadow: 3px 3px 0 0 var(--color-primary);
+}
+
+.teacher-photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 1100px) {
+  .teacher-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .teacher-section {
+    padding: 0 var(--space-6);
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .teacher {
-        padding-top: 80px;
-    }
+  .teacher {
+    padding-top: 80px;
+    padding-bottom: var(--space-10);
+  }
+
+  .teacher h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .teacher-section {
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .teacher-section-heading {
+    font-size: var(--text-base);
+  }
+
+  .teacher-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  /* Remove rotations on mobile to avoid layout clipping */
+  .teacher-photo:nth-child(n) {
+    transform: none;
+  }
+
+  .teacher-photo:hover {
+    transform: translate(2px, 2px);
+  }
 }

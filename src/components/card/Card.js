@@ -6,11 +6,14 @@ export const Card = ({
   imgAlt,
   title,
   description,
-  buttonText,
   link,
 }) => {
   return (
-    <div className='card-container'>
+    <a
+      href={link}
+      className='card-container'
+      target='_blank'
+      rel='noopener noreferrer'>
       {imgSrc && imgAlt && (
         <img
           src={imgSrc}
@@ -22,16 +25,6 @@ export const Card = ({
         {title && <h1 className='card-title'>{title}</h1>}
         {description && <p className='card-description'>{description}</p>}
       </div>
-
-      {buttonText && link && (
-        <a
-          href={link}
-          className='card-btn'
-          target='_blank'
-          rel='noopener noreferrer'>
-          {buttonText}
-        </a>
-      )}
-    </div>
+    </a>
   );
 };

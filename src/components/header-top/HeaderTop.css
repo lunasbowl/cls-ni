@@ -1,56 +1,78 @@
 .header-top {
     position: relative;
-    background-color: #63972f;
+    background-color: var(--color-accent);
+    border-bottom: 2px solid var(--color-text);
+    padding: var(--space-1) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 36px;
 }
 
 .LanguageSwitcher {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
+    gap: var(--space-2);
+    align-items: center;
 }
 
 .LanguageSwitcher button {
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 3px 12px;
+    font-size: var(--text-xs);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    letter-spacing: 0.04em;
     cursor: pointer;
-    border: #63972f;
-    background-color: #63972f;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid var(--color-text);
+    background-color: transparent;
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-full);
+    box-shadow: 2px 2px 0 0 var(--color-text);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    min-height: 28px;
 }
 
 .LanguageSwitcher button:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-text);
+    color: var(--color-surface-card);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 0 var(--color-text);
+}
+
+.LanguageSwitcher button:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    background-color: #63972f;
-}
-
-.social-links a {
-    margin-left: 10px;
+    gap: var(--space-2);
+    margin-right: var(--space-4);
 }
 
 .social-links img {
-    margin-top: 3px;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
+    transition: transform var(--transition-fast);
+    border-radius: var(--radius-sm);
+}
+
+.social-links a:hover img {
+    transform: scale(1.15) rotate(-5deg);
 }
 
 @media screen and (max-width: 768px) {
+    .header-top {
+        justify-content: flex-end;
+        padding: var(--space-2) var(--space-3);
+    }
+
     .LanguageSwitcher {
-        position: relative;
-        display: block;
-        text-align: right;
-        margin-top: 10px;
+        gap: var(--space-1);
     }
 
     .LanguageSwitcher button {
-        margin-left: 10px;
+        padding: 2px 8px;
+        font-size: 10px;
     }
-
 }

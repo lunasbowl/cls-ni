@@ -1,12 +1,21 @@
 .policy {
     padding-left: 50px;
-    padding-right:50px;
+    padding-right: 50px;
     padding-bottom: 25px;
     margin-top: -5rem;
+    font-family: var(--font-primary);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .policy-title {
     text-align: center;
+}
+
+.policy-title h1 {
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 .policy-table-of-content ol {
@@ -20,7 +29,17 @@
     border: none;
     padding: 0;
     font: inherit;
-    color: blue;
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+.policy-table-of-content button:hover {
+    color: var(--color-primary-light);
+}
+
+.policy-table-of-content button:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
 }
 
 .section-a ol {
@@ -34,6 +53,7 @@
 @media screen and (max-width: 768px) {
     .policy {
         padding: 20px;
+        margin-top: -5rem;
     }
     .policy-title {
         font-size: medium;

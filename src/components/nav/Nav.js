@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import './Nav.css';
@@ -7,6 +7,8 @@ function Nav () {
     const { t } = useTranslation();
 
     const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownTimeout = useRef(null);
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
@@ -17,17 +19,31 @@ function Nav () {
         setIsNavOpen(false);
     };
 
+    const openDropdown = () => {
+        clearTimeout(dropdownTimeout.current);
+        setIsDropdownOpen(true);
+    };
+
+    const closeDropdown = () => {
+        dropdownTimeout.current = setTimeout(() => {
+            setIsDropdownOpen(false);
+        }, 300);
+    };
 
     return (
         <nav className={`nav ${isNavOpen ? "active" : ""}`}>
             <button className="navbar-toggle" onClick={toggleNav}>
-                ☰
+                {isNavOpen ? '✕' : '☰'}
             </button>
             <div className="nav-items">
                 <div className="nav-item dropdown">
                     <Link to="/" onClick={scrollToTop}>{t('home')}</Link>
                 </div>
-                <div className="nav-item dropdown">
+                <div
+                    className={`nav-item dropdown${isDropdownOpen ? ' dropdown-open' : ''}`}
+                    onMouseEnter={openDropdown}
+                    onMouseLeave={closeDropdown}
+                >
                     <span className="nav-link">{t('about')}</span>
                     <div className="dropdown-content">
                         <Link to="/about-constitution" className="dropdown-item" onClick={scrollToTop}>

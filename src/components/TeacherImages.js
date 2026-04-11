@@ -22,28 +22,27 @@ import image21 from './assets/school staff/21.jpg';
 import image22 from './assets/school staff/22.jpg';
 import image23 from './assets/school staff/23.jpg';
 
+export const teacherCategories = [
+  {
+    key: 'teachers-leadership',
+    images: [image1, image2],
+  },
+  {
+    key: 'teachers-mandarin',
+    images: [image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17],
+  },
+  {
+    key: 'teachers-cantonese',
+    images: [image18, image19, image20, image21],
+  },
+  {
+    key: 'teachers-speaking',
+    images: [image22, image23],
+  },
+];
+
 export default [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
-  image12,
-  image13,
-  image14,
-  image15,
-  image16,
-  image17,
-  image18,
-  image19,
-  image20,
-  image21,
-  image22,
-  image23,
+  image1, image2, image3, image4, image5, image6, image7, image8,
+  image9, image10, image11, image12, image13, image14, image15, image16,
+  image17, image18, image19, image20, image21, image22, image23,
 ];

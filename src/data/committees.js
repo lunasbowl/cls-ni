@@ -1,0 +1,18 @@
+export const managementCommitteeData = [
+  ['Position', 'Name'],
+  ['Chair Person', 'YuanYuan McCoo Zhang'],
+  ['Vice Chair Person', 'Mo Yuen Lee'],
+  ['Member', 'Lili Li'],
+  ['Treasurer', 'Min Guo'],
+  ['Member', 'Yuet Kwan Lee'],
+  ['Member', 'Hong Xin'],
+  ['Member', 'Huiru Zheng'],
+  ['Member', 'Yan Tang'],
+  ['Member', 'Min Shen'],
+  ['Member', 'Wai Cheong Lee'],
+  ['Member', 'Yee Wan Rita Ku'],
+  ['Secretary', 'Yue Deng'],
+  ['Member', 'Mai Dung Tran'],
+  ['Member', 'Louisa Wing Sze Lau Wong'],
+  ['Member', 'Peipei Zhong'],
+];

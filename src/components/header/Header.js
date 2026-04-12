@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderTop from '../header-top/HeaderTop';
 import Nav from '../nav/Nav';
-import Logo from '../assets/clsni-logo.png';
+import Logo from '../assets/clsni-logo-transparent.png';
 import './Header.css';
 
 function Header() {

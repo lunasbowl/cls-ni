@@ -1,82 +1,64 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import ReactImageGallery from 'react-image-gallery';
-import './Gallery.css';
-
 import { useTranslation } from 'react-i18next';
+import { gallerySlides } from '../../data/gallerySlides';
+import './Gallery.css';
 
 function Gallery() {
   const { t } = useTranslation();
+  const galleryRef = useRef(null);
 
-  const images = [
-    /* {
-      original: './gallery/enroll2025.jpeg',
-      description: (
-        <div>
-          {t('enroll')}
-          <br />
-          <a
-            href='https://mp.weixin.qq.com/s/SCIs32jAYujo9vAHXzYpWw?token=325217238'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='button'>
-            {t('read-more')}
-          </a>
+  const images = gallerySlides.map((slide) => ({
+    original: slide.original,
+    renderItem: () => (
+      <div className='gallery-slide'>
+        <img
+          src={slide.original}
+          alt={t(slide.titleKey)}
+          className='gallery-slide-image'
+          style={slide.imagePosition ? { objectPosition: slide.imagePosition } : undefined}
+        />
+        <div className='gallery-slide-overlay' />
+        <div className='gallery-slide-content'>
+          <p className='gallery-slide-eyebrow'>{t(slide.eyebrowKey)}</p>
+          <h3 className='gallery-slide-title'>{t(slide.titleKey)}</h3>
+          <p className='gallery-slide-description'>{t(slide.descriptionKey)}</p>
+          {slide.isExternal === false ? (
+            <Link
+              to={slide.to}
+              className='gallery-slide-button'>
+              {t('read-more')}
+            </Link>
+          ) : (
+            <a
+              href={slide.to}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='gallery-slide-button'>
+              {t('read-more')}
+            </a>
+          )}
         </div>
-      ),
-    }, */
-    {
-      original: './gallery/gallery-1.jpg',
-      description: (
-        <div>
-          {t('school')}
-          <br />
-          <a
-            href='/about-history'
-            className='button'>
-            {t('read-more')}
-          </a>
-        </div>
-      ),
-    },
-
-    {
-      original: './gallery/gallery-2.jpg',
-      description: (
-        <div>
-          {t('see-events')}
-          <br />
-          <a
-            href='/events'
-            className='button'>
-            {t('read-more')}
-          </a>
-        </div>
-      ),
-    },
-
-    {
-      original: './gallery/gallery-3.jpg',
-      description: (
-        <div>
-          {t('staff')}
-          <br />
-          <a
-            href='/about-faculty-and-staff'
-            className='button'>
-            {t('read-more')}
-          </a>
-        </div>
-      ),
-    },
-  ];
+      </div>
+    ),
+  }));
 
   return (
-    <div>
+    <div
+      className='gallery-shell'
+      onMouseEnter={() => galleryRef.current?.pause()}
+      onMouseLeave={() => galleryRef.current?.play()}>
       <ReactImageGallery
+        ref={galleryRef}
         items={images}
         showPlayButton={false}
+        showFullscreenButton={false}
+        showThumbnails={false}
+        showBullets={true}
         autoPlay={true}
         slideInterval={6000}
+        additionalClass='modern-gallery'
       />
     </div>
   );

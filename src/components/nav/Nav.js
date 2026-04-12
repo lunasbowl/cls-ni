@@ -1,61 +1,112 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { getRouteById, navigationItems } from '../../config/routes';
 import './Nav.css';
 
-function Nav () {
-    const { t } = useTranslation();
+function Nav() {
+  const { t } = useTranslation();
+  const location = useLocation();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState(null);
 
-    const [isNavOpen, setIsNavOpen] = useState(false);
+  const toggleNav = () => {
+    setIsNavOpen((prevIsNavOpen) => {
+      const nextValue = !prevIsNavOpen;
 
-    const toggleNav = () => {
-        setIsNavOpen(!isNavOpen);
-    };
+      if (!nextValue) {
+        setOpenGroup(null);
+      }
 
-    const scrollToTop = () => {
-        window.scrollTo(0,0);
-        setIsNavOpen(false);
-    };
+      return nextValue;
+    });
+  };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    setIsNavOpen(false);
+    setOpenGroup(null);
+  };
 
-    return (
-        <nav className={`nav ${isNavOpen ? "active" : ""}`}>
-            <button className="navbar-toggle" onClick={toggleNav}>
-                ☰
-            </button>
-            <div className="nav-items">
-                <div className="nav-item dropdown">
-                    <Link to="/" onClick={scrollToTop}>{t('home')}</Link>
-                </div>
-                <div className="nav-item dropdown">
-                    <span className="nav-link">{t('about')}</span>
-                    <div className="dropdown-content">
-                        <Link to="/about-constitution" className="dropdown-item" onClick={scrollToTop}>
-                            {t('constitution')}
-                        </Link>
-                        <Link to="/about-history" className="dropdown-item" onClick={scrollToTop}>
-                            {t('history')}
-                        </Link>
-                        <Link to="/about-management-committee" className="dropdown-item" onClick={scrollToTop}>
-                            {t('management-committee')}
-                        </Link>
-                        <Link to="/about-faculty-and-staff" className="dropdown-item" onClick={scrollToTop}>
-                            {t('teachers')}
-                        </Link>
-                        <Link to="/about-parent-committee" className="dropdown-item" onClick={scrollToTop}>
-                            {t('parent-committee')}
-                        </Link>
-                    </div>
-                </div>
-                <div className="nav-item dropdown">
-                    <Link to="/events" onClick={scrollToTop}>{t('events')}</Link>
-                </div>
-                <div className="nav-item dropdown">
-                    <Link to="/policy" onClick={scrollToTop}>{t('policy')}</Link>
-                </div>
-            </div>
-        </nav>
+  const toggleGroup = (labelKey) => {
+    setOpenGroup((currentGroup) =>
+      currentGroup === labelKey ? null : labelKey
     );
-};
+  };
+
+  return (
+    <nav className={`nav ${isNavOpen ? 'active' : ''}`}>
+      <button
+        className='navbar-toggle'
+        type='button'
+        onClick={toggleNav}
+        aria-label='Toggle navigation'
+        aria-expanded={isNavOpen}>
+        <span />
+        <span />
+        <span />
+      </button>
+      <div className='nav-items'>
+        {navigationItems.map((item) => {
+          if (item.type === 'group') {
+            const isGroupActive = item.children.some((routeId) => {
+              const route = getRouteById(routeId);
+              return route.path === location.pathname;
+            });
+
+            const isGroupOpen = openGroup === item.labelKey;
+
+            return (
+              <div
+                key={item.labelKey}
+                className={`nav-item dropdown ${isGroupActive ? 'is-current' : ''} ${
+                  isGroupOpen ? 'is-open' : ''
+                }`}>
+                <button
+                  type='button'
+                  className='nav-link nav-group-trigger'
+                  onClick={() => toggleGroup(item.labelKey)}
+                  aria-expanded={isGroupOpen}>
+                  {t(item.labelKey)}
+                </button>
+                <div className='dropdown-content'>
+                  {item.children.map((routeId) => {
+                    const route = getRouteById(routeId);
+                    const isCurrent = route.path === location.pathname;
+
+                    return (
+                      <Link
+                        key={route.path}
+                        to={route.path}
+                        className={`dropdown-item ${isCurrent ? 'is-current' : ''}`}
+                        onClick={scrollToTop}>
+                        {t(route.labelKey)}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          }
+
+          const route = getRouteById(item.routeId);
+
+          return (
+            <div
+              key={route.path}
+              className={`nav-item ${route.path === location.pathname ? 'is-current' : ''}`}>
+              <Link
+                className='nav-link'
+                to={route.path}
+                onClick={scrollToTop}>
+                {t(route.labelKey)}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
 
 export default Nav;

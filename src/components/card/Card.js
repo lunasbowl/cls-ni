@@ -11,6 +11,15 @@ export const Card = ({
 }) => {
   return (
     <div className='card-container'>
+      {link && (
+        <a
+          href={link}
+          className='card-mobile-link'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label={title || buttonText || 'Open event'}
+        />
+      )}
       {imgSrc && imgAlt && (
         <img
           src={imgSrc}

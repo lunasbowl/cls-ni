@@ -1,15 +1,45 @@
-.management h1 {
+.management {
+    --management-green: #5b8741;
+    --management-ink: #1d2a21;
+    --management-muted: #607165;
+    --management-border: rgba(91, 135, 65, 0.18);
+    padding: 4.5rem 1rem 2.5rem;
+    background:
+        radial-gradient(circle at top left, rgba(91, 135, 65, 0.12), transparent 26%),
+        linear-gradient(180deg, #f5f2e8 0%, #ffffff 24%);
+}
+
+.management-hero {
+    max-width: 920px;
+    margin: 0 auto 2rem;
+    padding: 2rem 2.25rem;
+    border: 1px solid var(--management-border);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 24px 50px rgba(29, 42, 33, 0.08);
     text-align: center;
 }
 
+.management h1 {
+    margin: 0;
+    color: var(--management-ink);
+}
+
 .management h2 {
-    text-align: center;
+    margin: 0.85rem 0 0;
+    color: var(--management-muted);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
     .management {
-        padding: 10px;
-        padding-top: 80px;
+        padding: 1.5rem 10px 2rem;
+    }
+
+    .management-hero {
+        padding: 1.4rem 1rem;
+        border-radius: 22px;
     }
 
     .management h1 {

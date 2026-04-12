@@ -31,8 +31,10 @@ function ParentCommittee() {
   return (
     <>
       <div className='parent'>
-        <h1>{t('parent-committee')}</h1>
-        <h2>{t('school')} (2023-2024) </h2>
+        <div className='parent-hero'>
+          <h1>{t('parent-committee')}</h1>
+          <h2>{t('school')} (2023-2024)</h2>
+        </div>
         <div className='table'>
           <TableComponent data={tableData2} />
         </div>

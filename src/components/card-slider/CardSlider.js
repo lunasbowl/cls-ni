@@ -1,7 +1,7 @@
-import { useRef, useEffect, useState } from 'react';
-import TeacherImages from '../TeacherImages';
-import './CardSlider.css';
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { teacherImages } from '../../data/teacherImages';
+import './CardSlider.css';
 
 function CardSlider() {
   const [width, setWidth] = useState(0);
@@ -21,16 +21,16 @@ function CardSlider() {
           drag='x'
           dragConstraints={{ right: 0, left: -width }}
           className='inner-carousel'>
-          {TeacherImages.map((image) => {
-            return (
-              <motion.div className='item'>
-                <img
-                  src={image}
-                  alt=''
-                />
-              </motion.div>
-            );
-          })}
+          {teacherImages.map((image) => (
+            <motion.div
+              key={image}
+              className='item'>
+              <img
+                src={image}
+                alt=''
+              />
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
     </div>

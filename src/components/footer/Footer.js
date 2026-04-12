@@ -7,26 +7,43 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer>
+    <footer className='site-footer'>
       <div className='footer-content'>
-        <div className='footer-section'>
-          <h4>School Location:</h4>
-          <p>Central Building, Stranmillis University College</p>
-          <p>Stranmillis Road</p>
-          <p>Belfast BT9 5DY</p>
-          <p>E-mail: chinese.school.ni@gmail.com</p>
+        <div className='footer-brand'>
+          <p className='footer-eyebrow'>{t('footer-eyebrow')}</p>
+          <h3>{t('school')}</h3>
+          <p className='footer-tagline'>{t('slogan')}</p>
         </div>
-        <div className='qr-code'>
-          <img src={require('../assets/qrcode-personal.pic.jpg')} />
-          <p>{t('scan1')}</p>
+
+        <div className='footer-section footer-contact'>
+          <h4>{t('footer-location-title')}</h4>
+          <p>{t('footer-location-line-1')}</p>
+          <p>{t('footer-location-line-2')}</p>
+          <p>{t('footer-location-line-3')}</p>
+          <a href='mailto:chinese.school.ni@gmail.com'>
+            {t('footer-email')}
+          </a>
         </div>
-        <div className='qr-code'>
-          <img src={require('../assets/qrcode-gongzhonghao.pic.jpg')} />
-          <p>{t('scan2')}</p>
+
+        <div className='footer-qr-group'>
+          <div className='qr-code'>
+            <img
+              src={require('../assets/qrcode-personal.pic.jpg')}
+              alt='Personal QR code'
+            />
+            <p>{t('scan1')}</p>
+          </div>
+          <div className='qr-code'>
+            <img
+              src={require('../assets/qrcode-gongzhonghao.pic.jpg')}
+              alt='Public account QR code'
+            />
+            <p>{t('scan2')}</p>
+          </div>
         </div>
       </div>
       <div className='footer-bottom'>
-        <p>&copy; 2024 CLSNI. All rights reserved. </p>
+        <p>{t('footer-copyright')}</p>
       </div>
     </footer>
   );

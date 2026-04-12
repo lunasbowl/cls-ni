@@ -1,28 +1,44 @@
 .header-top {
     position: relative;
-    background-color: #63972f;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.65rem 1rem 0;
 }
 
 .LanguageSwitcher {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem;
+    border: 1px solid rgba(99, 151, 47, 0.18);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #63972f 0%, #78aa44 100%);
+    box-shadow: 0 12px 28px rgba(59, 102, 21, 0.18);
 }
 
 .LanguageSwitcher button {
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 0.45rem 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-    border: #63972f;
-    background-color: #63972f;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    border-radius: 999px;
+    background-color: transparent;
+    color: #f7f6ec;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .LanguageSwitcher button:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.LanguageSwitcher button.is-active {
+    background: #f7f6ec;
+    color: #3e6120;
+    box-shadow: 0 8px 18px rgba(43, 71, 18, 0.2);
 }
 
 .social-links {
@@ -42,15 +58,23 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header-top {
+        justify-content: center;
+        padding: 0.65rem 1rem 0.2rem;
+    }
+
     .LanguageSwitcher {
-        position: relative;
-        display: block;
-        text-align: right;
-        margin-top: 10px;
+        display: inline-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0.2rem;
+        max-width: 100%;
     }
 
     .LanguageSwitcher button {
-        margin-left: 10px;
+        margin-left: 0;
+        font-size: 0.82rem;
+        padding: 0.4rem 0.75rem;
     }
 
 }

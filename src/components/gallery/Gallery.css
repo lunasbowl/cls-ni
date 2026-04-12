@@ -1,12 +1,195 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
-a.button {
-    text-decoration: none;
-    background-color: none;
-    color: white;
-    font-size: 2rem;
+.gallery-shell {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1.75rem;
 }
 
-a.button :hover {
-    color: hotpink;
+.modern-gallery {
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 26px 60px rgba(15, 23, 20, 0.18);
+  background: #183123;
+}
+
+.modern-gallery .image-gallery-content,
+.modern-gallery .image-gallery-slide-wrapper,
+.modern-gallery .image-gallery-slides,
+.modern-gallery .image-gallery-slide {
+  border-radius: 32px;
+}
+
+.gallery-slide {
+  position: relative;
+  aspect-ratio: 16 / 6.6;
+  overflow: hidden;
+  background: linear-gradient(135deg, #183123, #5b8741);
+}
+
+.gallery-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.gallery-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(12, 25, 18, 0.8) 0%, rgba(12, 25, 18, 0.38) 45%, rgba(12, 25, 18, 0.08) 100%),
+    linear-gradient(180deg, rgba(12, 25, 18, 0.1) 0%, rgba(12, 25, 18, 0.3) 100%);
+}
+
+.gallery-slide-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(100% - 4.4rem, 460px);
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0 0 2.2rem 2.2rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  color: #fffdf6;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+}
+
+.gallery-slide-eyebrow {
+  margin: 0 0 0.6rem;
+  color: #d9efbc;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.gallery-slide-title {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.gallery-slide-description {
+  margin: 0.85rem 0 1.2rem;
+  max-width: 100%;
+  color: rgba(255, 253, 246, 0.88);
+  font-size: 0.98rem;
+  line-height: 1.58;
+  overflow-wrap: anywhere;
+}
+
+.gallery-slide-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background: #fff7d6;
+  color: #173223;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.gallery-slide-button:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+}
+
+.modern-gallery .image-gallery-icon {
+  color: #fff;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.22));
+}
+
+.modern-gallery .image-gallery-left-nav,
+.modern-gallery .image-gallery-right-nav {
+  padding: 0 1.25rem;
+}
+
+.modern-gallery .image-gallery-bullets {
+  bottom: 1.2rem;
+}
+
+.modern-gallery .image-gallery-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 0.35rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: none;
+}
+
+.modern-gallery .image-gallery-bullet.active,
+.modern-gallery .image-gallery-bullet:hover {
+  background: #fff7d6;
+  transform: scale(1.05);
+}
+
+@media only screen and (min-width: 1400px) {
+  .gallery-shell {
+    max-width: 1480px;
+    padding: 0 2rem 2rem;
+  }
+
+  .gallery-slide-content {
+    width: min(100% - 5rem, 500px);
+    margin: 0 0 2.6rem 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gallery-shell {
+    padding: 0 0.75rem 1.2rem;
+  }
+
+  .modern-gallery,
+  .modern-gallery .image-gallery-content,
+  .modern-gallery .image-gallery-slide-wrapper,
+  .modern-gallery .image-gallery-slides,
+  .modern-gallery .image-gallery-slide {
+    border-radius: 24px;
+  }
+
+  .gallery-slide {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-slide-overlay {
+    background:
+      linear-gradient(180deg, rgba(12, 25, 18, 0.1) 0%, rgba(12, 25, 18, 0.82) 72%, rgba(12, 25, 18, 0.94) 100%);
+  }
+
+  .gallery-slide-content {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: none;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .gallery-slide-title {
+    font-size: 1.6rem;
+  }
+
+  .gallery-slide-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .modern-gallery .image-gallery-left-nav,
+  .modern-gallery .image-gallery-right-nav {
+    padding: 0 0.35rem;
+  }
 }

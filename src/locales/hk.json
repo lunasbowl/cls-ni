@@ -1,4 +1,4 @@
-{
+﻿{
     "school": "北愛爾蘭中文學校(CLSNI)",
     "welcome": "歡迎進入",
     "enroll": "2025年北愛爾蘭中文學校開始報名",
@@ -18,15 +18,42 @@
     "slogan": "弘揚中國語言和文化",
     "see-events": "查看最近的新聞和活動",
     "staff": "我們的教師和員工",
+    "gallery-eyebrow-1": "\u6211\u5011\u7684\u6545\u4e8b",
+    "gallery-eyebrow-2": "\u6821\u5712\u52d5\u614b",
+    "gallery-eyebrow-3": "\u6211\u5011\u7684\u5718\u968a",
+    "gallery-description-1": "\u4e86\u89e3 CLSNI \u5982\u4f55\u6210\u9577\u70ba\u5145\u6eff\u6d3b\u529b\u7684\u4e2d\u6587\u5b78\u7fd2\u793e\u5340\u3002",
+    "gallery-description-2": "\u700f\u89bd\u5b78\u6821\u6176\u5178\u3001\u6f14\u51fa\u8207\u6700\u65b0\u52d5\u614b\u3002",
+    "gallery-description-3": "\u8a8d\u8b58\u71df\u9020\u6eab\u6696\u5b78\u7fd2\u74b0\u5883\u7684\u6559\u5e2b\u8207\u54e1\u5de5\u5718\u968a\u3002",
 
     "read-more": "閱讀更多",
 
     "meet-teachers": "認識我們的教職員！",
     "drag-see-more": "滑動圖片看更多！",
+    "teachers-intro": "認識帶領並教授普通話、粵語和口語課程的教職員團隊。",
+    "teachers-group-leadership": "領導團隊",
+    "teachers-group-mandarin": "普通話教師",
+    "teachers-group-cantonese": "粵語教師",
+    "teachers-group-speaking": "口語教師",
+    "teacher-role-principal": "校長",
+    "teacher-role-vice-principal": "副校長",
+    "teacher-role-year-1": "一年級",
+    "teacher-role-year-2": "二年級",
+    "teacher-role-year-3": "三年級",
+    "teacher-role-year-4": "四年級",
+    "teacher-role-year-5": "五年級",
+    "teacher-role-year-6": "六年級",
+    "teacher-role-year-7": "七年級",
+    "teacher-role-year-8": "八年級",
+    "teacher-role-cantonese": "粵語",
+    "teacher-role-speaking": "口語班",
 
     "history-page-title": "北愛中文學校報道",
-    "history-page-author": "- 張園園副校長",
-    "history-page-para1": "1983年，北愛華商會建立了北愛中文學校。宗旨是讓本地華人子弟學習、傳承和發揚中華文化。當時的中文學校只用粵語授課。學生也只有四十多人。在2001年，由留英的大陸學者們自發建立的國語學校正式併入北愛中文學校，也從此為中文學校開闢了國語的選項。",
+        "history-page-eyebrow": "\u95dc\u65bc CLSNI",
+    "history-page-guide": "\u95b1\u8b80\u6307\u5f15",
+    "history-section-1": "\u5275\u7acb\u8207\u8d77\u6e90",
+    "history-section-2": "\u767c\u5c55\u8207\u6559\u5b78",
+    "history-section-3": "\u97cc\u6027\u8207\u6821\u5712\u751f\u6d3b",
+    "history-section-4": "\u793e\u5340\u8207\u672a\u4f86",    "history-page-para1": "1983年，北愛華商會建立了北愛中文學校。宗旨是讓本地華人子弟學習、傳承和發揚中華文化。當時的中文學校只用粵語授課。學生也只有四十多人。在2001年，由留英的大陸學者們自發建立的國語學校正式併入北愛中文學校，也從此為中文學校開闢了國語的選項。",
     "history-page-para2": "在最近的二十年裡，隨著移居北愛華人的日益增多，也隨著中國經濟的飛速發展，學習中文已成為世界潮流，中文學校努力的為當地社區，特別是華人的子女提供良好的語言及文化的學習環境，培養孩子學習中文的興趣。",
     "history-page-para3": "到今年九月止，中文學校的學生總數已超過三百五十餘人，從五歲的小娃娃，到十八歲的年輕人；從口語初級班到初高中會考班，從普通話到粵語班，共二十六個班級。學校各年級各班的班主任在每年開學前都會依照學校的教學大綱，集結往年的教學經驗，制定新一年統一的教學及考試計畫。為中文學校進一步走向正規化，標準化和專業化不斷地努力。",
     "history-page-para4": "學習中文，不僅是為了考試，也是為了傳承中華文化。在教學之餘，我們也積極組織各類的文化活動，努力為學生創造更好的中文學習機會和環境，讓他們了解更多中華文化和習俗，同時促進家長與孩子之間的交流。中文學校舉辦了舞蹈班、兒童畫畫班、國畫班、書法班、古箏班、武術班。我們也舉辦了春季藝術展覽，冬季音樂會，文藝表演等等。中文學校也鼓勵學生積極參與相關機構舉辦的特色文化活動，如中華文化大樂園，親情中華書畫比賽，全球華裔青少年器樂展覽，全英華裔少兒國學經典誦讀比賽，全球國語朗讀比賽，華星小記者等等，讓學生增加實務機會，成長見聞。",
@@ -82,5 +109,13 @@
     "event-description-22": "",
 
     "scan1": "掃描二維碼添加北愛中文學校！",
-    "scan2": "掃描二維碼關注微信公眾號！"
+    "scan2": "掃描二維碼關注微信公眾號！",
+    "footer-eyebrow": "\u4fdd\u6301\u806f\u7e6b",
+    "footer-location-title": "\u5b78\u6821\u5730\u5740",
+    "footer-location-line-1": "Central Building, Stranmillis University College",
+    "footer-location-line-2": "Stranmillis Road",
+    "footer-location-line-3": "Belfast BT9 5DY",
+    "footer-email": "E-mail: chinese.school.ni@gmail.com",
+    "footer-copyright": "\u00a9 2026 CLSNI. \u4fdd\u7559\u6240\u6709\u6b0a\u5229\u3002"
 }
+

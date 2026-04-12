@@ -1,7 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Policy.css';
 
+function getHeaderOffset() {
+  const header = document.querySelector('header');
+
+  if (!header) {
+    return 24;
+  }
+
+  const headerStyles = window.getComputedStyle(header);
+
+  if (headerStyles.position !== 'fixed') {
+    return 24;
+  }
+
+  return Math.ceil(header.getBoundingClientRect().height) + 16;
+}
+
 function Policy() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const targetRef1 = useRef(null);
   const targetRef2 = useRef(null);
   const targetRef3 = useRef(null);
@@ -13,11 +30,9 @@ function Policy() {
   const targetRef9 = useRef(null);
   const targetRef10 = useRef(null);
 
-  const navbarHeight = 145;
-
   const scrollToTarget = (targetRef) => {
-    if (targetRef) {
-      const offset = targetRef.current.offsetTop - navbarHeight;
+    if (targetRef?.current) {
+      const offset = targetRef.current.offsetTop - getHeaderOffset();
 
       window.scrollTo({
         top: offset,
@@ -26,78 +41,101 @@ function Policy() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 420);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <>
-      <section
-        className='policy'
-        style={{ paddingTop: `${navbarHeight}px` }}>
-        <div className='policy-title'>
-          <h1>
-            Chinese Language School, Northern Ireland (CLSNI)
-            <br />
-            Safeguarding Statement and Policies
-          </h1>
-        </div>
-        <div className='policy-table-of-content'>
-          <h3>Section A - Safeguarding Statement and Policy</h3>
-          <ol>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef1)}>
-                Safeguarding Statement
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef2)}>
-                Aims of the Safeguarding Policy
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef3)}>
-                Roles and responsibilities
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef4)}>
-                Recruitment and Training of Teachers, and Volunteers
-              </button>
-            </li>
-          </ol>
-          <h3>Section B - Policies</h3>
-          <ol>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef5)}>
-                Equal Opportunities Policy
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef6)}>
-                Child Protection Policy
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef7)}>
-                Code of Behaviour
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef8)}>
-                Confidentiality, Complaints and Grievance Procedures
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef9)}>
-                Enrolment and Refund
-              </button>
-            </li>
-            <li>
-              <button onClick={() => scrollToTarget(targetRef10)}>
-                Review
-              </button>
-            </li>
-          </ol>
-        </div>
+    <section className='policy'>
+      <div className='policy-hero'>
+        <p className='policy-eyebrow'>School Guidance</p>
+        <h1>
+          Chinese Language School, Northern Ireland (CLSNI)
+          <br />
+          Safeguarding Statement and Policies
+        </h1>
+      </div>
+
+      <div className='policy-layout'>
+        <aside className='policy-sidebar'>
+          <div className='policy-table-of-content'>
+            <h3>Section A - Safeguarding Statement and Policy</h3>
+            <ol>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef1)}>
+                  Safeguarding Statement
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef2)}>
+                  Aims of the Safeguarding Policy
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef3)}>
+                  Roles and responsibilities
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef4)}>
+                  Recruitment and Training of Teachers, and Volunteers
+                </button>
+              </li>
+            </ol>
+            <h3>Section B - Policies</h3>
+            <ol>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef5)}>
+                  Equal Opportunities Policy
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef6)}>
+                  Child Protection Policy
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef7)}>
+                  Code of Behaviour
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef8)}>
+                  Confidentiality, Complaints and Grievance Procedures
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef9)}>
+                  Enrolment and Refund
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget(targetRef10)}>
+                  Review
+                </button>
+              </li>
+            </ol>
+          </div>
+        </aside>
+
         <div className='policy-main'>
-          <div className='section-a'>
+          <section className='policy-card'>
             <h2>Section A - Safeguarding Statement and Policy</h2>
             <h3 ref={targetRef1}>1. Safeguarding Statement</h3>
             <p>
@@ -137,12 +175,12 @@ function Policy() {
                 classroom-teaching, a project or a programme.
               </li>
               <li>
-                we broker the relationship between a school/ young person’s
+                we broker the relationship between a school/ young person&apos;s
                 setting/community venue and organisation.
               </li>
               <li>
                 we contract an organisation to work with a school/ young
-                people’s/ community setting.
+                people&apos;s/ community setting.
               </li>
               <li>
                 we work in partnership with another organisation or agency.
@@ -182,8 +220,8 @@ function Policy() {
             <p>
               The Designated person within the CLSNI responsible for
               Safeguarding and Child Protection is the Vice-chairperson of the
-              Management Committee. In the Vice-chairperson’s absence the role
-              will be undertaken by an appointed member of the Management
+              Management Committee. In the Vice-chairperson&apos;s absence the
+              role will be undertaken by an appointed member of the Management
               Committee.
             </p>
             <p>The role of the Designated Person is to:</p>
@@ -293,7 +331,7 @@ function Policy() {
                 the job requirements and responsibilities should be clarified.
               </li>
               <li>
-                they are made aware of the CLSNI’s safeguarding policy and
+                they are made aware of the CLSNI&apos;s safeguarding policy and
                 procedures.
               </li>
               <li>training needs (if any) are identified.</li>
@@ -353,7 +391,7 @@ function Policy() {
               </li>
               <li>
                 if an allegation is made against a member of the CLSNI teachers
-                or volunteers , the CLSNI will act swiftly and there will either
+                or volunteers, the CLSNI will act swiftly and there will either
                 be a criminal investigation, a child protection investigation
                 and / or a disciplinary or misconduct investigation.
               </li>
@@ -367,9 +405,9 @@ function Policy() {
             <h4>vii. Images and Documentation</h4>
             <p>
               The collection of images for promotional purposes by the CLSNI
-              teachers / volunteers or those authorised to do so on the CLSNI’s
-              behalf, is acceptable providing permission has been granted by the
-              individuals who will be photographed/videoed.
+              teachers / volunteers or those authorised to do so on the
+              CLSNI&apos;s behalf, is acceptable providing permission has been
+              granted by the individuals who will be photographed/videoed.
             </p>
             <p>
               Adults (including parents / guardians of children below the age of
@@ -399,8 +437,9 @@ function Policy() {
               drawer. They should be erased / destroyed as soon as there is no
               further use for them.
             </p>
-          </div>
-          <div className='section-b'>
+          </section>
+
+          <section className='policy-card'>
             <h2>Section B - Policies</h2>
             <h3 ref={targetRef5}>1. Equal Opportunities Policy</h3>
             <h4>Statement of Policy</h4>
@@ -537,9 +576,10 @@ function Policy() {
                 Committee.
               </li>
               <li>
-                The definition of ‘child’ or ‘young person’ relates to anyone
-                under the age of 18, and also to those above the age of 18 who
-                are vulnerable for reasons of mental and physical ability.
+                The definition of &apos;child&apos; or &apos;young person&apos;
+                relates to anyone under the age of 18, and also to those above
+                the age of 18 who are vulnerable for reasons of mental and
+                physical ability.
               </li>
             </ol>
             <p>
@@ -556,7 +596,7 @@ function Policy() {
             <ol>
               <li>Treat everyone with respect</li>
               <li>Provide an example you wish others to follow</li>
-              <li>Respect people’s right to personal privacy</li>
+              <li>Respect people&apos;s right to personal privacy</li>
               <li>
                 Provide access for people to talk about any concerns they may
                 have
@@ -603,7 +643,7 @@ function Policy() {
             <p>
               Chinese Language School, Northern Ireland works to deliver
               high-quality teaching and other services. It is vital to share
-              relevant information – but this must be done in the proper way.
+              relevant information but this must be done in the proper way.
             </p>
             <p>
               The principle of confidentiality is followed in all the work of
@@ -627,8 +667,8 @@ function Policy() {
               will be made available to members of the public on request.
             </p>
             <p>
-              Should complaints arise it is Management Committee’s policy to
-              deal with these complaints quickly and efficiently.
+              Should complaints arise it is Management Committee&apos;s policy
+              to deal with these complaints quickly and efficiently.
             </p>
             <p>
               A complaint is defined as a user of Chinese Language School,
@@ -760,21 +800,25 @@ function Policy() {
             </ol>
 
             <h3 ref={targetRef9}>5. Enrolment and Refund</h3>
-            <h4>i. Tuition Refund:</h4>
-            <p>
-              If a student withdraws within two weeks after the start of the
-              term, the full tuition will be refunded. After that, no refunds
-              will be given.
-            </p>
-            <h4>ii. Transfer Students:</h4>
-            <p>
-              Transfer students may be admitted within one month after the start
-              of the academic year (depending on availability). After that, no
-              admissions will be accepted unless in special circumstances, such
-              as a newly relocated Chinese family in Northern Ireland. Transfer
-              students must pay the full annual tuition, with no discounts
-              available.
-            </p>
+            <div className='policy-callout'>
+              <h4>i. Tuition Refund</h4>
+              <p>
+                If a student withdraws within two weeks after the start of the
+                term, the full tuition will be refunded. After that, no refunds
+                will be given.
+              </p>
+            </div>
+            <div className='policy-callout'>
+              <h4>ii. Transfer Students</h4>
+              <p>
+                Transfer students may be admitted within one month after the
+                start of the academic year (depending on availability). After
+                that, no admissions will be accepted unless in special
+                circumstances, such as a newly relocated Chinese family in
+                Northern Ireland. Transfer students must pay the full annual
+                tuition, with no discounts available.
+              </p>
+            </div>
 
             <h3 ref={targetRef10}>6. Review</h3>
             <p>
@@ -782,24 +826,34 @@ function Policy() {
               annually, updating the action plan as appropriate.
             </p>
 
-            <h4>Contact details of designated officer:</h4>
-            <p>YuanYuan McCoo Zhang</p>
-            <p>
-              Chinese Language School, Northern Ireland
-              <br />
-              1 Stranmillis Embankment
-              <br />
-              Belfast, BT7 1GB
-            </p>
-            <p>
-              Tel: 02890 288222
-              <br />
-              Email: Chinese.school.ni@gmail.com
-            </p>
-          </div>
+            <div className='policy-contact-card'>
+              <h4>Contact details of designated officer</h4>
+              <p>YuanYuan McCoo Zhang</p>
+              <p>
+                Chinese Language School, Northern Ireland
+                <br />1 Stranmillis Embankment
+                <br />
+                Belfast, BT7 1GB
+              </p>
+              <p>
+                Tel: 02890 288222
+                <br />
+                Email: Chinese.school.ni@gmail.com
+              </p>
+            </div>
+          </section>
         </div>
-      </section>
-    </>
+      </div>
+
+      <button
+        type='button'
+        className={`policy-back-to-top ${showBackToTop ? 'is-visible' : ''}`}
+        onClick={scrollToTop}
+        aria-label='Back to top'>
+        <span aria-hidden='true'>↑</span>
+        <span>Top</span>
+      </button>
+    </section>
   );
 }
 

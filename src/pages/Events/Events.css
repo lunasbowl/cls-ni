@@ -1,16 +1,31 @@
 .event-section {
-  padding: 50px 0;
+  --events-green: #5b8741;
+  --events-ink: #1d2a21;
+  --events-border: rgba(91, 135, 65, 0.18);
+  padding: 4.5rem 1rem 2.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(91, 135, 65, 0.12), transparent 26%),
+    linear-gradient(180deg, #f5f2e8 0%, #ffffff 24%);
 }
 
 .recent-events {
-  padding: 20px;
   text-align: center;
 }
 
+.recent-events-hero {
+  max-width: 920px;
+  margin: 0 auto 2rem;
+  padding: 2rem 2.25rem;
+  border: 1px solid var(--events-border);
+  border-radius: 28px;
+  background: transparent;
+  box-shadow: 0 24px 50px rgba(29, 42, 33, 0.08);
+}
+
 .recent-events h1 {
-  color: #996734;
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin: 0;
+  color: var(--events-ink);
+  font-size: clamp(1.85rem, 3vw, 2.7rem);
 }
 
 .event-link {
@@ -63,7 +78,12 @@
 }
 
 @media (max-width: 768px) {
-  .recent-events {
-    margin-top: 40px;
+  .event-section {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .recent-events-hero {
+    padding: 1.4rem 1rem;
+    border-radius: 22px;
   }
 }

@@ -195,7 +195,14 @@
         width: 100%;
     }
 
+    .nav-item,
+    .dropdown {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .nav-link {
+        box-sizing: border-box;
         justify-content: space-between;
         min-height: 50px;
         padding: 0.95rem 1rem;

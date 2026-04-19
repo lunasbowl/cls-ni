@@ -1,5 +1,11 @@
 export const eventLinks = [
   {
+    to: '/admissions-2026',
+    titleKey: 'event-title-23',
+    isExternal: false,
+    isNew: true,
+  },
+  {
     to: 'https://mp.weixin.qq.com/s/yADRD6lneMyvGJ-gdVCMaA',
     titleKey: 'event-title-19',
     isNew: true,

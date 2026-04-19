@@ -13,22 +13,37 @@ function Gallery() {
     original: slide.original,
     renderItem: () => (
       <div className='gallery-slide'>
-        <img
-          src={slide.original}
-          alt={t(slide.titleKey)}
-          className='gallery-slide-image'
-          style={slide.imagePosition ? { objectPosition: slide.imagePosition } : undefined}
-        />
+        <picture>
+          {slide.mobileOriginal ? (
+            <source
+              media='(max-width: 768px)'
+              srcSet={slide.mobileOriginal}
+            />
+          ) : null}
+          <img
+            src={slide.original}
+            alt={t(slide.titleKey)}
+            className='gallery-slide-image'
+            style={{
+              ...(slide.imagePosition ? { '--gallery-image-position': slide.imagePosition } : {}),
+              ...(slide.mobileImagePosition
+                ? { '--gallery-image-position-mobile': slide.mobileImagePosition }
+                : {}),
+            }}
+          />
+        </picture>
         <div className='gallery-slide-overlay' />
         <div className='gallery-slide-content'>
           <p className='gallery-slide-eyebrow'>{t(slide.eyebrowKey)}</p>
           <h3 className='gallery-slide-title'>{t(slide.titleKey)}</h3>
-          <p className='gallery-slide-description'>{t(slide.descriptionKey)}</p>
+          {slide.descriptionKey ? (
+            <p className='gallery-slide-description'>{t(slide.descriptionKey)}</p>
+          ) : null}
           {slide.isExternal === false ? (
             <Link
               to={slide.to}
               className='gallery-slide-button'>
-              {t('read-more')}
+              {t(slide.buttonLabelKey || 'read-more')}
             </Link>
           ) : (
             <a
@@ -36,7 +51,7 @@ function Gallery() {
               target='_blank'
               rel='noopener noreferrer'
               className='gallery-slide-button'>
-              {t('read-more')}
+              {t(slide.buttonLabelKey || 'read-more')}
             </a>
           )}
         </div>

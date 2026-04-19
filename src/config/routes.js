@@ -7,7 +7,7 @@ import ParentCommittee from '../pages/ParentCommittee/ParentCommittee';
 import Teachers from '../pages/Teachers/Teachers';
 import Policy from '../pages/Policy/Policy';
 import HiringPage from '../pages/Events/HiringPage/HiringPage';
-import SchoolStartPage from '../pages/Events/SchoolStart2024/SchoolStart2024Page';
+import Admissions2026Page from '../pages/Events/Admissions2026/Admissions2026Page';
 
 const routesById = {
   home: {
@@ -63,10 +63,10 @@ const routesById = {
     path: '/hiring',
     Component: HiringPage,
   },
-  schoolStart2024: {
-    id: 'schoolStart2024',
-    path: '/school-start-2024',
-    Component: SchoolStartPage,
+  admissions2026: {
+    id: 'admissions2026',
+    path: '/admissions-2026',
+    Component: Admissions2026Page,
   },
 };
 

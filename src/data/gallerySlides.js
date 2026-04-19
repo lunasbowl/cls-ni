@@ -1,5 +1,17 @@
 export const gallerySlides = [
   {
+    original: './gallery/admission2026-gallery.png',
+    mobileOriginal: './gallery/admission2026-gallery-mobile.png',
+    eyebrowKey: 'gallery-eyebrow-2',
+    titleKey: 'event-title-23',
+    descriptionKey: 'gallery-description-4',
+    buttonLabelKey: 'join-now',
+    imagePosition: 'center 35%',
+    mobileImagePosition: 'center 18%',
+    to: 'https://forms.gle/hwT1DhjzaC9mP7kG6',
+    isExternal: true,
+  },
+  {
     original: './gallery/gallery-1.jpg',
     eyebrowKey: 'gallery-eyebrow-1',
     titleKey: 'school',

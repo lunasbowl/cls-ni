@@ -1,39 +1,42 @@
 export const eventLinks = [
   {
-    to: '/admissions-2026',
-    titleKey: 'event-title-23',
-    isExternal: false,
+    to: 'https://mp.weixin.qq.com/s/fsujlVmAPFQIznNPt2Vd2Q',
+    titleKey: 'event-title-24',
+    isNew: true,
+  },
+  {
+    to: 'https://mp.weixin.qq.com/s/TCMVgRPdFgqIfM9OkCzSwg?token=194586250&lang=zh_CN',
+    titleKey: 'event-title-25',
+    isNew: true,
+  },
+  {
+    to: 'https://mp.weixin.qq.com/s/P0R9KQS_XOdor_WU63Tc2A?token=194586250&lang=zh_CN',
+    titleKey: 'event-title-26',
     isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/yADRD6lneMyvGJ-gdVCMaA',
     titleKey: 'event-title-19',
-    isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/4N2yjFGJpLHzgPCDjWZmYA',
     titleKey: 'event-title-20',
-    isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/pbYfDMGfyFBeAmaparnxbQ',
     titleKey: 'event-title-21',
-    isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/ZgSOejRfyPJvIrrG7h6XWw',
     titleKey: 'event-title-22',
-    isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/vSCXgqgBFusRZ2QeA0PoXw',
     titleKey: 'event-title-18',
-    isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/uFNSKDOwX-aCxzZg7w5xfA',
     titleKey: 'event-title-17',
-    isNew: true,
   },
   {
     to: 'https://mp.weixin.qq.com/s/UeGc0BigdXQSx26_WsZFMA',

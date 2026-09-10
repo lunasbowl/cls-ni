@@ -2,10 +2,24 @@ import anniversaryImage from '../components/assets/events/42nd-anniversary.jpg';
 import mynameImage from '../components/assets/events/myname.png';
 import manianImage from '../components/assets/events/manian.jpeg';
 import halloweenImage from '../components/assets/events/halloween.jpg';
-import nanyuecampImage from '../components/assets/events/nanyuecamp.jpeg';
-import winterMusicImage from '../components/assets/events/winter-music.jpeg';
+import recitationImage from '../components/assets/events/recitation-2026.jpg';
+import belfastZooImage from '../components/assets/events/belfast-zoo.jpg';
 
 export const homePageCards = [
+  {
+    imageSrc: belfastZooImage,
+    imageAlt: 'CLSNI group outing to Belfast Zoo',
+    titleKey: 'event-title-25',
+    descriptionKey: 'event-description-25',
+    link: 'https://mp.weixin.qq.com/s/TCMVgRPdFgqIfM9OkCzSwg?token=194586250&lang=zh_CN',
+  },
+  {
+    imageSrc: recitationImage,
+    imageAlt: 'CLSNI students at the 2026 Mandarin recitation competition',
+    titleKey: 'event-title-26',
+    descriptionKey: 'event-description-26',
+    link: 'https://mp.weixin.qq.com/s/P0R9KQS_XOdor_WU63Tc2A?token=194586250&lang=zh_CN',
+  },
   {
     imageSrc: anniversaryImage,
     imageAlt: '42nd anniversary event',
@@ -33,19 +47,5 @@ export const homePageCards = [
     titleKey: 'event-title-22',
     descriptionKey: 'event-description-22',
     link: 'https://mp.weixin.qq.com/s/ZgSOejRfyPJvIrrG7h6XWw',
-  },
-  {
-    imageSrc: nanyuecampImage,
-    imageAlt: 'Nanyue camp event',
-    titleKey: 'event-title-18',
-    descriptionKey: 'event-description-18',
-    link: 'https://mp.weixin.qq.com/s/vSCXgqgBFusRZ2QeA0PoXw',
-  },
-  {
-    imageSrc: winterMusicImage,
-    imageAlt: 'Winter music event',
-    titleKey: 'event-title-21',
-    descriptionKey: 'event-description-21',
-    link: 'https://mp.weixin.qq.com/s/pbYfDMGfyFBeAmaparnxbQ',
   },
 ];

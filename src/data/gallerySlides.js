@@ -1,14 +1,13 @@
 export const gallerySlides = [
   {
-    original: './gallery/admission2026-gallery.png',
-    mobileOriginal: './gallery/admission2026-gallery-mobile.png',
+    original: './gallery/open-ceremony-26-27.jpg',
     eyebrowKey: 'gallery-eyebrow-2',
-    titleKey: 'event-title-23',
+    titleKey: 'event-title-24',
     descriptionKey: 'gallery-description-4',
-    buttonLabelKey: 'join-now',
-    imagePosition: 'center 35%',
-    mobileImagePosition: 'center 18%',
-    to: 'https://forms.gle/hwT1DhjzaC9mP7kG6',
+    buttonLabelKey: 'read-more',
+    imagePosition: 'center 55%',
+    mobileImagePosition: 'center 55%',
+    to: 'https://mp.weixin.qq.com/s/fsujlVmAPFQIznNPt2Vd2Q',
     isExternal: true,
   },
   {

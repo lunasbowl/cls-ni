@@ -7,7 +7,6 @@ import ParentCommittee from '../pages/ParentCommittee/ParentCommittee';
 import Teachers from '../pages/Teachers/Teachers';
 import Policy from '../pages/Policy/Policy';
 import HiringPage from '../pages/Events/HiringPage/HiringPage';
-import Admissions2026Page from '../pages/Events/Admissions2026/Admissions2026Page';
 
 const routesById = {
   home: {
@@ -62,11 +61,6 @@ const routesById = {
     id: 'hiring',
     path: '/hiring',
     Component: HiringPage,
-  },
-  admissions2026: {
-    id: 'admissions2026',
-    path: '/admissions-2026',
-    Component: Admissions2026Page,
   },
 };
 

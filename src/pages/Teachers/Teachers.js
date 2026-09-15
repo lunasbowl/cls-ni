@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { teacherSections } from '../../data/teachers';
 
 function Teachers() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isTraditionalChinese = (i18n.resolvedLanguage || i18n.language) === 'hk';
 
   return (
     <div className='teacher'>
@@ -29,14 +30,19 @@ function Teachers() {
                   <article
                     key={`${member.nameEn}-${member.roleKey || member.role}`}
                     className='teacher-card'>
-                    <div className='teacher-card-image'>
+                    <div className={`teacher-card-image${member.imageStyle === 'circle' ? ' teacher-card-image-circle' : ''}`}>
+                      <div className='teacher-card-photo'>
                       <img
                         src={member.image}
+                        style={{ '--portrait-scale': member.imageScale, '--portrait-position': member.imagePosition }}
                         alt={`${member.nameEn} - ${member.roleKey ? t(member.roleKey) : member.role}`}
                       />
+                      </div>
                     </div>
                     <div className='teacher-card-body'>
-                      <p className='teacher-card-name-zh'>{member.nameZh}</p>
+                      <p className='teacher-card-name-zh'>
+                        {isTraditionalChinese ? member.nameHk : member.nameZh}
+                      </p>
                       <h3>{member.nameEn}</h3>
                       <p className='teacher-card-role'>
                         {member.roleKey ? t(member.roleKey) : member.role}

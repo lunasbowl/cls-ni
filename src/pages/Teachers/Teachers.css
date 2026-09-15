@@ -93,6 +93,36 @@
     height: auto;
 }
 
+.teacher-card-image-circle {
+    position: relative;
+    aspect-ratio: 1;
+    background: #e4e5e9;
+}
+
+.teacher-card-image-circle .teacher-card-photo {
+    position: absolute;
+    top: 0;
+    left: 11%;
+    width: 78%;
+    height: 78%;
+    border-radius: 50%;
+    clip-path: polygon(
+        0 0, 100% 0, 100% 88%, 72% 88%,
+        65% 90%, 57% 91.5%, 50% 92%,
+        43% 91.5%, 35% 90%, 28% 88%, 0 88%
+    );
+    overflow: hidden;
+}
+
+.teacher-card-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--portrait-position, center 85%);
+    transform: scale(var(--portrait-scale, 1.2));
+    transform-origin: center 25%;
+}
+
 .teacher-card-body {
     padding: 1rem 1rem 1.15rem;
     text-align: center;
